@@ -1,0 +1,156 @@
+<div class="home-blog">
+  <div class="container">
+    <div class="row">
+      <div class="home-blog-wrapper">
+        {% if section.settings.title != blank %}
+        <header class="section-header text-center">
+          <h2>{{ section.settings.title | escape }}</h2>
+        </header>
+        {% endif %}
+
+        {%- assign blog = blogs[section.settings.blog] -%}
+
+        {% unless blog.empty? %}
+        <div class="grid grid--uniform grid--blog blog-slider">
+          {% for article in blog.articles limit: section.settings.post_limit %}
+          <div class="grid__item medium-up--one-third">
+            <div class="blog-item-group">
+              {% if article.image %}
+              <a href="{{ article.url }}" class="article__grid-image">
+                {{ article | img_url: '400x' | img_tag: article.title }}
+              </a>
+              {% endif %}
+
+              <div class="blog-des article__grid-meta{% if article.image %} article__grid-meta--has-image{% endif %}">
+                <h2 class="h3 article__title">
+                  <a href="{{ article.url }}">{{ article.title }}</a>
+                </h2>
+                <div class="article__desc">{{ article.content | strip_html | truncatewords: 25 }}</div>
+                {% if section.settings.show_view_all %}
+                <ul class="list--inline article__meta-buttons">
+                  <li>
+                    <a href="{{ article.url }}" class="article__action">
+                      <i class="fa fa-angle-double-right"></i> {{ 'blogs.article.read_more' | t }}
+                    </a>
+                  </li>
+                </ul>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% else %}
+        <div class="grid grid--uniform grid--blog">
+          {% for i in (1..section.settings.post_limit) %}
+          <div class="grid__item medium-up--one-third">
+            <div class="article__grid-meta">
+              <h2 class="h3 article__title">
+                <a href="#">{{ 'homepage.onboarding.blog_title' | t }}</a>
+              </h2>
+
+              {% if settings.blog_show_author %}
+              <span class="article__author">{{ 'homepage.onboarding.blog_author' | t }}</span>
+              {% endif %}
+
+              <div class="rte article__grid-excerpt">
+                {{ 'homepage.onboarding.blog_excerpt' | t }}
+              </div>
+              {% if section.settings.show_view_all %}
+              <ul class="list--inline article__meta-buttons">
+                <li>
+                  <a href="{{ article.url }}" class="article__action">
+                    <i class="fa fa-angle-double-right"></i> {{ 'blogs.article.read_more' | t }}
+                  </a>
+                </li>
+              </ul>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endunless %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Blog posts",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Blog posts"
+    },
+    {
+      "id": "blog",
+      "type": "blog",
+      "label": "Blog"
+    },
+    {
+      "type": "select",
+      "id": "post_limit",
+      "label": "Posts",
+      "default": "3",
+      "options": [
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "6",
+          "label": "6"
+        },
+        {
+          "value": "9",
+          "label": "9"
+        },
+        {
+          "value": "12",
+          "label": "12"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": "Show 'Read more' button",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog posts",
+      "category": "Blog",
+      "settings": {
+        "blog": "News",
+        "post_limit": "3"
+      }
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  if($(".blog-slider").length){
+    $(".blog-slider").owlCarousel({
+      navigation : true,
+      pagination: false,
+      autoPlay: false,     
+      paginationSpeed: 800,
+      items: 3,
+      slideSpeed : 200,
+      rewindSpeed : 1000,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall : [979,3],
+      itemsTablet: [768,2],
+      itemsTabletSmall: [540,2],
+      itemsMobile : [360,1],
+      navigationText: ['<i class="fa fa-angle-left" title="Previous" data-toggle="tooltip" data-placement="top"></i>', '<i class="fa fa-angle-right" title="Next" data-toggle="tooltip" data-placement="top"></i>']
+    });
+  }
+</script>

@@ -1,0 +1,49 @@
+<!-- snippet/product-price.liquid -->
+{% if product.title %}
+{% include 'wh_calculate_discount' with product %}
+  {%- assign compare_at_price = wh_compare_at_price -%}
+  {%- assign price = wh_price -%}
+  {%- assign price_varies = bold_price_varies -%}
+  {%- assign available = product.available -%}
+{% else %}
+  {%- assign compare_at_price = 1999 -%}
+  {%- assign price = 1999 -%}
+  {%- assign price_varies = false -%}
+  {%- assign available = true -%}
+{% endif %}
+
+{%- assign money_price = price | money -%}
+
+{% if compare_at_price > price %}
+  {% if price_varies %}
+    <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+    <s class="product-price__price">{{ compare_at_price | money }}</s>
+    <span class="product-price__price product-price__sale">
+      <span class="product__price">{{ money_price }}</span>
+{% if wh_discount_value == 1 and set_price == null %} 
+      <span class="product-price__sale-label">{{ 'products.product.on_sale' | t }}</span>
+{% endif %}
+    </span>
+  {% else %}
+    <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+    <s class="product-price__price">{{ compare_at_price | money }}</s>
+    <span class="product-price__price product-price__sale">
+      {{ money_price }}
+{% if wh_discount_value == 1 and set_price == null %} 
+      <span class="product-price__sale-label">{{ 'products.product.on_sale' | t }}</span>
+{% endif %}
+    </span>
+  {% endif %}
+{% else %}
+
+  {% if price_varies %}
+    <span class="product__price">{{ money_price }}</span>
+  {% else %}
+    <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+    <span class="product-price__price">{{ money_price }}</span>
+  {% endif %}
+{% endif %}
+
+{% unless available %}
+  <span class="product-price__sold-out">{{ 'products.product.sold_out' | t }}</span>
+{% endunless %}

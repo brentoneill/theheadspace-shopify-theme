@@ -1,0 +1,82 @@
+<section data-section-id="{{ section.id }}" data-section-type="third-banners" class="third-banners">
+  <div class="container">
+    <div class="row">
+      <div class="banner_group">
+        <div class="banner-with-custom">
+          <div class="left-area col-sm-3">
+            <a href="{{ section.settings.left-link }}"><img src="{{ section.settings.left-banner | img_url: "270x600", crop: 'center'}}" alt=""/></a>
+          </div>
+          <div class="middle-area col-sm-6">
+            <div class="top-area col-sm-12">
+              <a href="{{ section.settings.midtop-link }}"><img src="{{ section.settings.midtop-banner | img_url: "555x330", crop: 'center'}}" alt=""/></a>
+            </div>
+            <div class="bottom-area col-sm-12">
+              <a href="{{ section.settings.midbtm-link }}"><img src="{{ section.settings.midbtm-banner | img_url: "555x240", crop: 'center'}}" alt=""/></a>
+            </div>
+          </div>
+          <div class="right-area col-sm-3">
+            <a href="{{ section.settings.right-link }}"><img src="{{ section.settings.right-banner | img_url: "270x600", crop: 'center'}}" alt=""/></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Banners - Custom Layout",
+  "class": "index-section index-section--flush",
+  "settings": [
+	{
+      "type": "image_picker",
+      "id": "left-banner",
+      "label": "Left Banner - Upload image"
+    },
+	{
+      "type": "url",
+      "id": "left-link",
+      "label": "Left Banner - Link",
+      "info": "Optional"
+    },
+	{
+      "type": "image_picker",
+      "id": "midtop-banner",
+      "label": "Midle Top Banner - Upload image"
+    },
+	{
+      "type": "url",
+      "id": "midtop-link",
+      "label": "Midle Top Banner - Link",
+      "info": "Optional"
+    },
+	{
+      "type": "image_picker",
+      "id": "midbtm-banner",
+      "label": "Midle Bottom Banner - Upload image"
+    },
+	{
+      "type": "url",
+      "id": "midbtm-link",
+      "label": "Midle Bottom Banner - Link",
+      "info": "Optional"
+    },
+	{
+      "type": "image_picker",
+      "id": "right-banner",
+      "label": "Right Banner - Upload image"
+    },
+	{
+      "type": "url",
+      "id": "right-link",
+      "label": "Right Banner - Link",
+      "info": "Optional"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banners - Custom Layout",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

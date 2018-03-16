@@ -1,0 +1,77 @@
+<section data-section-id="{{ section.id }}" data-section-type="third-banners" class="third-banners">
+  <div class="container">
+    <div class="row">
+      {% if section.settings.image != blank %}
+      <div class="banner-with-text">
+          {%- assign img_url = '' -%}
+          {% if section.settings.image != blank %}
+            {%- assign img_url = section.settings.image | img_url: "1170x500", crop: 'center' -%}
+          {% else %}
+            {%- assign img_url = '' -%}
+          {% endif %}      
+          <div class="banner-element {{ column_class }}">
+            <a class="banner-bkg" href="{{section.settings.link}}"><img src="{{ img_url }}" alt="" /></a>
+            <div class="banner-caption">
+              <div class="banner-caption-inner">
+                {% if section.settings.title != blank %}
+                <h2 class="h1 mega-title">{{ section.settings.title | escape }}</h2>
+                {% endif %}
+                {% if section.settings.text != blank %}
+                <div class="rte-setting mega-subtitle">{{ section.settings.text }}</div>
+                {% endif %}
+                {% if section.settings.link != blank %}
+                <a href="{{ section.settings.button_link }}" class="btn hero__btn">
+                  {{ section.settings.actiontext }}
+                </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Banner with Text overlay",
+  "class": "index-section index-section--flush",
+  "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },        
+	    {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Already loving Everything? Rate us now"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+		  "default": "<p>We make your dream came true</p>"
+        },
+		{
+          "type": "text",
+          "id": "actiontext",
+          "label": "Action Text",
+          "default": "Purchase Now"
+        },
+		{
+          "type": "url",
+          "id": "link",
+          "label": "Link",
+          "info": "Optional"
+        }
+  ],
+  "presets": [
+    {
+      "name": "Banner with text overlay",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

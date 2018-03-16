@@ -1,0 +1,124 @@
+<section data-section-id="{{ section.id }}" data-section-type="collections">
+  {% unless section.settings.full %}
+  <div class="container">
+    <div class="row">
+  {% endunless %}
+      {% if section.settings.title != blank %}
+        <div class="section-header text-center">
+          <h2>{{ section.settings.title | escape }}</h2>
+          <div class="section-sub-title">{{ section.settings.subtitle | escape }}</div>
+        </div>        
+      {% endif %}
+
+      {% case section.settings.grid %}
+        {% when '2' %}
+          {%- assign grid_item_width = 'col-sm-6' -%}
+          {%- assign image_size = '530x' -%}
+        {% when '3' %}
+          {%- assign grid_item_width = 'col-sm-4' -%}
+          {%- assign image_size = '350x' -%}
+        {% when '4' %}
+          {%- assign grid_item_width = 'col-sm-3' -%}
+          {%- assign image_size = '250x' -%}
+      {% endcase %}
+
+      <div class="collection-grid">
+        <div class="grid grid--uniform">
+          {% for block in section.blocks limit: section.blocks.size %}
+            <div class="coll-element {{ grid_item_width }}">
+              {%- assign collection = collections[block.settings.collection] -%}
+              {% include 'collection-grid-item', collection_image_size: image_size %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      {% if section.blocks.size == 0 %}
+        {% include 'no-blocks' %}
+      {% endif %}
+  {% unless section.settings.full %}
+    </div>
+  </div>
+  {% endunless %}
+</section>
+
+{% schema %}
+{
+  "name": "Collection list",
+  "class": "index-section collection-list",
+  "max_blocks": 12,
+  "settings": [
+	{
+      "type": "checkbox",
+      "id": "full",
+      "label": "Show full width",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Collection list"
+    },
+	{
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sub Title",
+      "default": "Discover the great things people do with Sketchfab. What will you do with Sketchfab?"
+    },
+    {
+      "type": "select",
+      "id": "grid",
+      "label": "Collections per row",
+      "default": "3",
+      "options": [
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "featured_collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "label": "Collection",
+          "id": "collection",
+          "type": "collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection list",
+      "category": "Collection",
+      "settings": {
+        "grid": "3"
+      },
+      "blocks": [
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

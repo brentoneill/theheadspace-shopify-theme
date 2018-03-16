@@ -1,0 +1,354 @@
+<section class="top-header">
+  <div class="top-header-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="top-header-inner col-sm-12">
+          <div class="left-area">
+            <div class="{{ logo_classes }}">        
+              {% if section.settings.logo %}
+              <a href="/" itemprop="url" class="site-header__logo-image">              
+                <img src="{{ section.settings.logo | img_url: '231x' }}" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
+              </a>
+              {% else %}
+              <a class="site-header__logo-link" href="/" itemprop="url">{{ shop.name }}</a>
+              {% endif %}
+            </div>
+          </div>
+          <div class="right-area">
+            <!-- Customer Links -->            
+            {% if shop.customer_accounts_enabled %}
+            <ul class="unstyled customer_accounts">
+              {% if customer  %}
+              <li class="toolbar-customer my-account"><a href="/account"><i class="fa fa-user"></i> {{ 'layout.customer.your_account' | t }}</a></li>
+              {% comment %}<li class="toolbar-customer my-wishlist logged-wishlist"><a href="/pages/wish-list"><i class="fa fa-heart"></i>{{ 'layout.customer.wishlist' | t }}</a></li>{% endcomment %}
+			  <li>{% include 'iwish_v2' with 'iwishlink' %}</li>              
+              <li class="toolbar-customer log-out"><a href="/account/logout"><i class="fa fa-sign-out"></i> {{ 'layout.customer.logout' | t }}</a></li>
+              {% else %}
+              <li class="toolbar-customer login-account">                    
+                <span id="loginButton" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="sub-dropdown1 visible-sm visible-md visible-lg"></i>
+                  <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
+                  <i class="fa fa-unlock-alt"></i>                                        
+                  {{ 'sections.header.top_header_login' | t | customer_login_link }}
+                </span>                    
+                <div id="loginBox" class="dropdown-menu text-left">
+                  {% form 'customer_login' %}
+                  <div id="bodyBox">
+                    <ul class="control-container customer-accounts list-unstyled">
+                      <li class="clearfix">
+                        <label for="customer_email_box" class="control-label">{{'layout.header.login_dropdown.customer_email'|t}} <span class="req">*</span></label>
+                        <input type="email" value="" name="customer[email]" id="customer_email_box" class="form-control" />
+                      </li>
+                      {% if form.password_needed %}
+                      <li class="clearfix">
+                        <label for="customer_password_box" class="control-label">{{'layout.header.login_dropdown.customer_password'|t}} <span class="req">*</span></label>
+                        <input type="password" value="" name="customer[password]" id="customer_password_box" class="form-control password" />
+                      </li>
+                      {% endif %}
+                      <li class="clearfix">
+                        <span class="required field">*{{'layout.header.login_dropdown.required'|t}}</span>
+                      </li>
+                      <li class="clearfix">
+                        <a href="/account/login#recover"><span class="red">?</span> {{'layout.header.login_dropdown.forgot'|t}}</a>
+                      </li>
+                      <li class="clearfix">
+                        <button class="btn btn-1" type="submit">{{'layout.header.login_dropdown.login'|t}}</button>
+                      </li>                  
+                      <li class="clearfix">
+                        <a class="action btn btn-3" href="/account/register">{{'layout.header.login_dropdown.create'|t}}</a>
+                      </li>
+                    </ul>
+                  </div>
+                  {% endform %}
+                </div>
+              </li>
+              <li class="toolbar-customer create-account">
+                {% if shop.customer_accounts_optional %}          
+                <i class="fa fa-key"></i>
+                {{ 'sections.header.top_header_register' | t | customer_register_link }}
+                {% endif %}
+              </li>  
+              {% comment %}<li class="toolbar-customer my-wishlist"><a href="/pages/wish-list"><i class="fa fa-heart"></i>{{ 'sections.header.top_header_wishlist' | t }}</a></li>{% endcomment %}
+              
+              <li>{% include 'iwish_v2' with 'iwishlink' %}</li>
+              
+              {% endif %}
+              
+              <!-- Currency -->            
+              {% if settings.show_multiple_currencies %}
+              <li class="currency_group">
+                <div class="currencies-switcher">
+                  {% include 'currencies-switcher' with settings.currency_style %}
+                </div>
+              </li>
+              {% endif %}
+              <li>
+                <a href="https://www.facebook.com/theheadspace" target="_blank"><img src="https://cdn.shopify.com/s/files/1/1898/4303/files/fb.jpg?10983765093033907911" alt="Follow us on Facebook" width="20"/></a>&nbsp&nbsp<a href="https://www.twitter.com/theheadspace" target="_blank"><img src="https://cdn.shopify.com/s/files/1/1898/4303/files/twitt.jpg?10983765093033907911" alt="Follow us on Twitter" width="20"/></a>&nbsp&nbsp<a href="https://www.instagram.com/theheadspace" target="_blank"><img src="https://cdn.shopify.com/s/files/1/1898/4303/files/insta.jpg?10983765093033907911" alt="Follow us on Instagram" width="20"/></a>
+              </li>
+              <li class="cartnav">
+                <a href="/cart">Cart</a>
+              </li>              
+            </ul>
+            {% endif %}                
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="main-header">
+   <div class="main-header-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="main-header-inner">
+          <div data-section-id="{{ section.id }}" data-section-type="header-section">             
+            <div class="bottom_header">
+              <nav class="site-nav small--hide" id="AccessibleNav" role="navigation">
+                {% include 'site-nav', nav_alignment: 'site-nav--centered', nav_link: section.settings.main_linklist %}              
+              </nav>
+              <div class="right_bottom_header">
+                <div class="search_form">
+                  <div class="site-header__search">
+                    {% include 'search-form' %}
+                  </div>
+                </div>
+ 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+  </div>
+</section>
+{% if section.settings.nav_sticky %}
+<div class="fix-sticky"></div>
+{% endif %}
+
+<section class="mobile-nav-header">
+  <div class="mobile-nav-header-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="mobile-nav-header-inner">                                            
+          <div class="mobile-top-navigation visible-xs">      
+            <button id="showLeftPush" class="visible-xs"><i class="fa fa-bars fa-2x"></i></button>
+            <ul class="list-inline">        
+              {% if shop.customer_accounts_enabled %}
+              <li class="is-mobile-login">
+                <div class="btn-group">
+                  <div class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-user"></i>
+                  </div>
+                  <ul class="customer dropdown-menu">
+                    {% if customer %}
+                    <li class="toolbar-customer log-out">
+                      <a href="/account/logout">{{ 'layout.customer.logout' | t }}</a>
+                    </li>
+                    <li class="toolbar-customer my-account">
+                      <a href="/account">{{ 'layout.customer.your_account' | t }}</a>
+                    </li>
+                    {% comment %}
+                    <li class="toolbar-customer my-wishlist">
+                      <a href="/pages/wish-list">{{ 'layout.customer.wishlist' | t }}</a>
+                    </li>
+                    {% endcomment %}
+                    <li>{% include 'iwish_v2' with 'iwishlink' %}</li>
+                    {% else %}
+                    <li class="logout">
+                      <a href="/account/login">{{'layout.header.login_dropdown.login'|t}}</a>
+                    </li>
+                    <li class="account">
+                      <a href="/account/register">{{'layout.header.login_dropdown.create'|t}}</a>
+                    </li>
+                    {% endif %}
+                  </ul>
+                </div>
+              </li>
+              {% endif %}
+
+              {% if section.settings.show_multiple_currencies %}
+              <li class="is-mobile-currency currency_group">
+                <div class="currencies-switcher"> 
+                  {% include 'currencies-switcher' with settings.currency_style %}
+                </div>
+              </li>
+              {% endif %}
+              
+              <li class="is-mobile-cart">
+                <a href="/cart" title="Shopping Cart">
+                  <div class="num-items-in-cart">
+                    <i class="fa fa-shopping-cart"></i>
+                      <span class="icon">
+                        <span class="number">{{ cart.item_count }}</span>
+                      </span>
+                    <div class="ajax-subtotal" style="display:none;"></div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="is-mobile-nav-menu nav-menu visible-xs" id="is-mobile-nav-menu">
+            <ul class="nav navbar-nav hoverMenuWrapper">
+              {% for l in linklists[section.settings.main_linklist].links %}
+              {% include 'header_navigation' %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if section.settings.nav_sticky %}
+<script>
+  function addaffix(scr){
+    if($(window).innerWidth() >= 992){
+      if(scr > 90){
+        if(!$('.main-header').hasClass('baffix')){
+          $('.main-header').addClass('affix').addClass('animated');
+        }
+      }
+      else{
+        if($('.main-header').hasClass('affix')){          
+          $('.main-header').removeClass('affix').removeClass('animated');
+        }
+      }
+    }
+    else $('.main-header').removeClass('affix');
+  }
+  $(window).scroll(function() {
+    var scrollTop = $(this).scrollTop();
+    addaffix(scrollTop);
+  });
+  $( window ).resize(function() {
+    var scrollTop = $(this).scrollTop();
+	addaffix(scrollTop);
+  });
+</script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+	{
+        "type": "header",
+        "content": "General Setting"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image"
+    },       
+	{
+        "type": "header",
+        "content": "Phone Information"
+    },
+	{
+        "type": "checkbox",
+        "id": "show_phone",
+        "label": "Show?"
+    },
+	{
+        "type": "text",
+        "id": "phone_text",
+        "label": "Input Phone number"
+    },    
+	  {
+        "type": "header",
+        "content": "Navigation Setting"
+      },
+      {
+        "type": "link_list",
+        "id": "main_linklist",
+        "label": "Select Link list for main Navigation",
+        "default": "main-menu"
+      }, 
+	  {
+        "type": "checkbox",
+        "id": "nav_sticky",
+        "label": "Active Sticky (float) Navigation?",
+        "default": true
+      },
+	  {
+        "type": "header",
+        "content": "Mega Menu style 01 (3 link list and image)"
+      },
+      {
+        "type": "text",
+        "id": "megamenu_items_1",
+        "label": "Mega Menu 01 Title",
+        "info": "(blank if you don't want to use)"
+      },
+      {
+        "type": "link_list",
+        "id": "mega_linklist_1",
+        "label": "Link List 1 (column 1)"
+      },
+      {
+        "type": "link_list",
+        "id": "mega_linklist_2",
+        "label": "Link List 2 (column 2)"
+      },
+      {
+        "type": "link_list",
+        "id": "mega_linklist_3",
+        "label": "Link List 3 (column 3)"
+      },
+      {
+        "type": "image_picker",
+        "id": "mega-bg-01",
+        "label": "Upload a image"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_menu_image_1",
+        "label": "Show Menu image collumn",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Mega Menu style 02 (text and 3 link list)"
+      },
+      {
+        "type": "text",
+        "id": "megamenu_items_2",
+        "label": "Mega Menu 02 Title",
+        "info": "(blank if you don't want to use)"
+      },
+      {
+        "type": "textarea",
+        "id": "megamenu_text_2",
+        "label": "Sample Text (HTML)"
+      },
+      {
+        "type": "link_list",
+        "id": "mega_linklist_4",
+        "label": "Link List 1 (column 1)"
+      },
+      {
+        "type": "link_list",
+        "id": "mega_linklist_5",
+        "label": "Link List 2 (column 2)"
+      },
+      {
+        "type": "link_list",
+        "id": "mega_linklist_6",
+        "label": "Link List 3 (column 3)"
+      },
+      {
+        "type": "image_picker",
+        "id": "mega-bg-02",
+        "label": "Upload a image"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_menu_image_2",
+        "label": "Show Menu image background",
+        "default": true
+      }
+  ]
+}
+{% endschema %}

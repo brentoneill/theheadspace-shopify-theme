@@ -1,0 +1,94 @@
+<div class="home-info page-width">
+  <div class="container">
+    <div class="row">  
+      <div class="home-content">
+        {%- assign grid_item_width = 'medium-up--one-third' -%}
+        {% case section.blocks.size %}
+          {% when 1 %}
+            {%- assign grid_item_width = 'col-sm-12' -%}
+          {% when 2 %}
+            {%- assign grid_item_width = 'col-sm-6' -%}
+          {% when 3 %}
+            {%- assign grid_item_width = 'col-sm-4' -%}
+        {% endcase %}
+        <div class="info-col-{{ section.blocks.size }}">
+          {% for block in section.blocks %}
+            <div class="info-{{ forloop.index }} info-element {{ grid_item_width }}" {{ block.shopify_attributes }}>                          
+              <div class="info-group">
+                <div class="info-icon">
+                  {% if block.settings.text != blank %}
+                  <div class="rte-setting">{{ block.settings.text }}</div>
+                  {% endif %}
+                </div>
+                <div class="info-text">
+                  {% if block.settings.title != blank %}
+                  <span class="h4">{{ block.settings.title }}</span>
+                  {% endif %}
+                  {% if block.settings.subtitle != blank %}
+                  <span class="h4">{{ block.settings.subtitle }}</span>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      {% if section.blocks.size == 0 %}
+        {% include 'no-blocks' %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text columns with Info",
+  "class": "index-section",
+  "max_blocks": 3,
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Column",
+      "settings": [
+		{
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Add a title or tagline"
+        },
+		{
+          "type": "text",
+          "id": "subtitle",
+          "label": "Explain text",
+          "default": "Add a title or tagline"
+        }        
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text columns with Info",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

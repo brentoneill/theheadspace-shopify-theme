@@ -1,0 +1,299 @@
+{%- assign social_icons = false -%}
+
+{% if
+  settings.social_twitter_link != blank
+  or settings.social_facebook_link != blank
+  or settings.social_pinterest_link != blank
+  or settings.social_instagram_link != blank
+  or settings.social_tumblr_link != blank
+  or settings.social_snapchat_link != blank
+  or settings.social_youtube_link != blank
+  or settings.social_vimeo_link != blank
+  or template contains 'article'
+  or template contains 'blog'
+%}
+  {% assign social_icons = true %}
+{% endif %}
+
+<footer class="site-footer" role="contentinfo">  
+  {% if section.settings.footer_info_show %}
+  <section class="footer_info-block">
+    <div class="footer_info_wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="footer_info_inner">
+            <div class="footer_inf-content">
+              {% if section.settings.fi_about_show%}
+              <div class="fi-aboutus col-sm-3">
+                <div class="footer-title"><h5>{{ section.settings.fi_about_title }}</h5></div>
+                <div class="fi-aboutus-content">
+                  {{ section.settings.fi_about }}
+                </div>
+              </div>
+              {% endif %}
+              {% if section.settings.useful_show %}
+              <div class="fi-useful col-sm-2">
+                <div class="footer-title"><h5>{{ section.settings.useful_title }}</h5></div>
+                <div class="fi-useful-content col-sm-12">
+                  <ul class="fi-left col-sm-12">
+                    {% for link in linklists[section.settings.useful_link1].links %}
+                    <li>
+                      <a href="{{ link.url }}"><span>{{ link.title }}</span></a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+              {% endif %}
+              <div class="fi-follow col-sm-3">
+                <div class="footer-title"><h5>{{ section.settings.fi_follow_title }}</h5></div>
+                <div class="fi-follow-content">
+                  {% if section.settings.facebook_link != blank %}<a href="{{ section.settings.facebook_link }}" title="Facebook" class="icon-social facebook" data-toggle="tooltip" data-placement="top"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a>{% endif %}
+                  {% if section.settings.twitter_link != blank %}<a href="{{ section.settings.twitter_link }}" title="Twitter" class="icon-social twitter" data-toggle="tooltip" data-placement="top"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a>{% endif %}
+                  {% if section.settings.google_link != blank %}<a href="{{ section.settings.google_link }}" title="Google+" class="icon-social google" data-toggle="tooltip" data-placement="top"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-google-plus fa-stack-1x fa-inverse"></i></span></a>{% endif %}
+                  {% if section.settings.pinterest_link != blank %}<a href="{{ section.settings.pinterest_link }}" title="Pinterest" class="icon-social pinterest" data-toggle="tooltip" data-placement="top"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-pinterest-p fa-stack-1x fa-inverse"></i></span></a>{% endif %}            
+                  {% if section.settings.youtube_link != blank %}<a href="{{ section.settings.youtube_link }}" title="Youtube" class="icon-social youtube" data-toggle="tooltip" data-placement="top"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i></span></a>{% endif %}
+                  {% if section.settings.instagram_link != blank %}<a href="http://www.instagram.com/theheadspace" title="Instagram" class="icon-social instagram" data-toggle="tooltip" data-placement="top"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a>{% endif %}
+                  {% if section.settings.atom_link != blank %}<a href="{{ section.settings.atom_link }}" title="{{ 'layout.footer.news' | t: shop: shop.name }}" class="icon-social atom" data-toggle="tooltip" data-placement="top"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-share-alt fa-stack-1x fa-inverse"></i></span></a>{% endif %}
+                  {% if section.settings.vimeo_link != blank %}<a href="{{ section.settings.vimeo_link }}" title="Vimeo" class="icon-social vimeo" data-toggle="tooltip" data-placement="top"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-vimeo-square fa-stack-1x fa-inverse"></i></span></a>{% endif %}
+                  {% if section.settings.tumblr_link != blank %}<a href="{{ section.settings.tumblr_link }}" title="Tumblr" class="icon-social tumblr" data-toggle="tooltip" data-placement="top"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-tumblr fa-stack-1x fa-inverse"></i></span></a>{% endif %}
+                </div> 
+              </div>
+              {% if section.settings.footer_newsletter_enable %}
+  			  <div class="fi-follow col-sm-4">
+                <div class="footer-title"><h5>{{ section.settings.footer_newsletter_heading }}</h5></div>
+                <div class="newsletter-subtitle">{{ section.settings.footer_newsletter_subtext }}</div>
+                <div class="newsletter-form">
+                  <form action="{{ section.settings.mailing_list_form_action }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">            
+                    <div class="input-group">
+                      <input type="hidden" name="MERGE1" id="MERGE1" size="25" value="First Name">
+                      <input type="hidden" name="MERGE2" id="MERGE2" size="25" value="Last Name">
+                      <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" value="" placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}">                
+                      <span class="input-group__btn">
+                        <button type="submit" class="btn newsletter__submit" name="subscribe" id="subscribe">
+                          <span class="newsletter__submit-text--large">{{ 'general.newsletter_form.submit' | t }}</span>
+                        </button>
+                      </span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+  			{% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+  <section class="copy-right">
+    <div class="copy-right-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="copy-right-group">
+            <div class="copy-right-inner">
+              <div class="left-copyright col-sm-6">
+                &copy; {{ 'now' | date: "%Y" }} {{ shop.name | link_to: '/' }} | {{ powered_by_link }}
+              </div>
+              <div class="right-payment col-sm-6">
+                <ul class="credit-cards clearfix">
+                  {% if section.settings.accept_visa %}<li><img src="{{ 'icon-cc-visa.png' | asset_url }}" alt="Visa" /></li>{% endif %}
+                  {% if section.settings.accept_mastercard %}<li><img src="{{ 'icon-cc-mastercard.png' | asset_url }}" alt="MasterCard" /></li>{% endif %}
+                  {% if section.settings.accept_amex %}<li><img src="{{ 'icon-cc-amex.png' | asset_url }}" alt="Amex" /></li>{% endif %}
+                  {% if section.settings.accept_discover %}<li><img src="{{ 'icon-cc-discover.png' | asset_url }}" alt="Discover" /></li>{% endif %}
+                  {% if section.settings.accept_paypal %}<li><img src="{{ 'icon-cc-paypal.png' | asset_url }}" alt="PayPal" /></li>{% endif %}
+                  {% if section.settings.accept_google %}<li><img src="{{ 'icon-cc-google.png' | asset_url }}" alt="Google Wallet" /></li>{% endif %}
+                  {% if section.settings.accept_bitcoin %}<li><img src="{{ 'icon-cc-bitcoin.png' | asset_url }}" alt="Bitcoin" /></li>{% endif %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [	
+	{
+        "type": "header",
+        "content": "Footer Information"
+      },
+      {
+        "type": "checkbox",
+        "id": "footer_info_show",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "paragraph",
+        "content": "1. About area"
+      },
+      {
+        "type": "checkbox",
+        "id": "fi_about_show",
+        "label": "Show this area?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "fi_about_title",
+        "label": "Title area",
+        "default": "About us"
+      },
+      {
+        "type": "textarea",
+        "id": "fi_about",
+        "label": "Insert content:"
+      },
+      {
+        "type": "paragraph",
+        "content": "2. Useful Links area"
+      },
+      {
+        "type": "checkbox",
+        "id": "useful_show",
+        "label": "Show this area?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "useful_title",
+        "label": "Title area",
+        "default": "Useful Links"
+      },
+      {
+        "type": "link_list",
+        "id": "useful_link1",
+        "label": "Select Link list left link"
+      },   
+      {
+        "type": "text",
+        "id": "fi_follow_title",
+        "label": "3. Follow Us"
+      },
+      {
+        "type": "text",
+        "id": "twitter_link",
+        "label": "Twitter",
+        "info": "https:\/\/twitter.com\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "facebook_link",
+        "label": "Facebook",
+        "info": "https:\/\/www.facebook.com\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "google_link",
+        "label": "Google+",
+        "info": "https:\/\/plus.google.com\/+shopify"
+      },
+      {
+        "type": "text",
+        "id": "youtube_link",
+        "label": "Youtube",
+        "info": "https:\/\/www.youtube.com\/user\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "vimeo_link",
+        "label": "Vimeo",
+        "info": "https:\/\/vimeo.com\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "pinterest_link",
+        "label": "Pinterest",
+        "info": "https:\/\/www.pinterest.com\/shopify\/"
+      },
+      {
+        "type": "text",
+        "id": "instagram_link",
+        "label": "Instagram",
+        "info": "https:\/\/instagram.com\/shopify\/"
+      },
+      {
+        "type": "text",
+        "id": "tumblr_link",
+        "label": "Tumblr",
+        "info": "http:\/\/shopify.tumblr.com\/"
+      },
+      {
+        "type": "text",
+        "id": "atom_link",
+        "label": "Blog feed",
+        "info": "\/blogs\/news.atom"
+      },
+      {
+        "type": "paragraph",
+        "content": "4. Newsletter"
+      },
+      {
+        "type": "checkbox",
+        "id": "footer_newsletter_enable",
+        "label": "Show newsletter signup",
+        "default": true
+      },
+      {
+          "type": "text",
+          "id": "footer_newsletter_heading",
+          "label": "Heading"
+      },
+      {
+          "type": "text",
+          "id": "footer_newsletter_subtext",
+          "label": "Explain text"
+      },
+	  {
+        "type": "textarea",
+        "id": "mailing_list_form_action",
+        "label": "Mailchimp form action URL",
+        "info": "[Find your MailChimp form action URL](https:\/\/docs.shopify.com\/manual\/configuration\/store-customization\/communicating-with-customers\/accounts-and-newsletters\/get-a-mailchimp-form-action-url)."
+      },
+      {
+        "type": "header",
+        "content": "Payment method Icons"
+      },
+      {
+        "type": "checkbox",
+        "id": "accept_visa",
+        "label": "Visa"
+      },
+      {
+        "type": "checkbox",
+        "id": "accept_mastercard",
+        "label": "Mastercard"
+      },
+      {
+        "type": "checkbox",
+        "id": "accept_amex",
+        "label": "American Express"
+      },
+      {
+        "type": "checkbox",
+        "id": "accept_discover",
+        "label": "Discover"
+      },
+      {
+        "type": "checkbox",
+        "id": "accept_paypal",
+        "label": "PayPal"
+      },
+      {
+        "type": "checkbox",
+        "id": "accept_google",
+        "label": "Google"
+      },
+      {
+        "type": "checkbox",
+        "id": "accept_bitcoin",
+        "label": "Bitcoin"
+      }
+  ]
+}
+{% endschema %}

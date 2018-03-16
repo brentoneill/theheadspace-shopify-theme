@@ -1,0 +1,177 @@
+<div class="home-tabs">
+  <div class="container">
+    <div class="row">
+      <div class="home-tabs-wrapper">
+        {% if section.settings.title != blank %}
+        <div class="section-header text-center">
+          <h2>{{ section.settings.title | escape }}</h2>
+        </div>
+        {% endif %}      
+
+        {% case section.settings.grid %}
+        {% when '2' %}
+        {%- assign grid_item_width = '50%' -%}
+        {%- assign image_size = '570x' -%}
+        {% when '3' %}
+        {%- assign grid_item_width = '33.33333%' -%}
+        {%- assign image_size = '370x' -%}
+        {% when '4' %}
+        {%- assign grid_item_width = '25%' -%}
+        {%- assign image_size = '270x' -%}
+        {% when '5' %}
+        {%- assign grid_item_width = '20%' -%}
+        {%- assign image_size = '210x' -%}
+        {% when '6' %}
+        {%- assign grid_item_width = '16.666666%' -%}
+        {%- assign image_size = '170x' -%}
+        <style> 
+          @media(max-width: 1024px) {
+            .hoverBorderWrapper img {
+              width: 250px;
+            }
+          }
+          @media(max-width: 320px) {
+            .hoverBorderWrapper img {
+              width: 290px;
+            }
+          }
+        </style>
+        {% endcase %}
+
+        {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
+
+        {% if section.blocks.size > 0 %}
+        <div class="section-content">
+          <div id="tabpanel">
+            <ul class="nav nav-tabs home-tabs-title" role="tablist" id="home-tabs">
+              {% for block in section.blocks %}  
+              {% if block.settings.title != blank %}
+              <li role="presentation" {% if forloop.index == 1 %}class="active"{% endif %}><a href="#home-tabs-{{ forloop.index }}" aria-controls="home-tabs-{{ forloop.index }}" role="tab" data-toggle="tab">{{ block.settings.title }}</a></li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+            <div class="tab-content">
+              {% for block in section.blocks %}
+              {%- assign collection = collections[block.settings.collection] -%}
+              <div role="tabpanel" class="tab-pane fade {% if forloop.index == 1 %}in active{% endif %}" id="home-tabs-{{ forloop.index}}">
+                <div class="section-tab-content">
+                  <div class="content col-{{section.settings.grid}}">
+                    {% for product in collection.products limit: product_limit %}
+                    <div class="grid__item {{ grid_item_width }}" style="width:{{ grid_item_width }}">
+                      {% include 'product-item', grid_image_width: image_size %}
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>      
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Home Tabs",
+  "class": "index-section",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Featured collection"
+    },
+    {
+      "type": "select",
+      "id": "grid",
+      "label": "Products per row",
+      "default": "3",
+      "options": [
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        },
+        {
+          "value": "6",
+          "label": "6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "rows",
+      "label": "Rows",
+      "default": "2",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ]
+    }
+  ],
+  "blocks": [	
+    {
+      "type": "featured_collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        },
+        {
+          "label": "Collection",
+          "id": "collection",
+          "type": "collection"
+        }	
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Tabs",
+      "category": "Collection",
+      "settings": {
+        "title": "Collection list"
+      },
+      "blocks": [
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

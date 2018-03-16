@@ -1,0 +1,163 @@
+<section data-section-id="{{ section.id }}" data-section-type="products">
+  {% unless section.settings.full %}
+  <div class="container">
+    <div class="row">
+  {% endunless %}
+      {% if section.settings.title != blank %}
+        <div class="section-header text-center">
+          <h2>{{ section.settings.title | escape }}</h2>
+        </div>
+      {% endif %}
+
+      {%- assign collection = collections[section.settings.collection] -%}
+
+      {% case section.settings.grid %}
+        {% when '2' %}
+          {%- assign grid_item_width = 'float:left; width:50%;' -%}
+          {%- assign image_size = '600x' -%}
+        {% when '3' %}
+          {%- assign grid_item_width = 'float:left; width:33.333333%;' -%}
+          {%- assign image_size = '400x' -%}
+        {% when '4' %}
+          {%- assign grid_item_width = 'float:left; width:25%;' -%}
+          {%- assign image_size = '300x' -%}
+        {% when '5' %}
+          {%- assign grid_item_width = 'float:left; width:20%;' -%}
+          {%- assign image_size = '240x' -%}
+        {% when '6' %}
+          {%- assign grid_item_width = 'float:left; width:16.666666%;' -%}
+          {%- assign image_size = '200x' -%}
+      {% endcase %}
+
+      {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
+
+      <div class="grid grid--uniform grid--view-items">
+        {% for product in collection.products limit: product_limit %}
+{%- include 'bold-product' with product, hide_action: 'skip' -%}
+          <div class="grid__item" style="{{ grid_item_width }}">
+            {% include 'product-item', grid_image_width: image_size %}
+          </div>
+        {% else %}
+
+          {% for i in (1..product_limit) %}
+            <div class="grid__item {{ grid_item_width }}">
+              <div class="grid-view-item">
+                <a href="#" class="grid-view-item__link">
+                  <div class="grid-view-item__image">
+                    {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                    {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                  </div>
+                  <div class="h4 grid-view-item__title">{{ 'homepage.onboarding.product_title' | t }}</div>
+                  <div class="grid-view-item__meta">
+                    {% include 'product-price' %}
+                  </div>
+                </a>
+              </div>
+            </div>
+          {% endfor %}
+        {% endfor %}
+      </div>
+
+      {% if section.settings.show_view_all %}
+        <div class="text-center">
+          <a href="{{ collection.url }}" class="btn">
+            {{ 'collections.general.view_all' | t }}
+          </a>
+        </div>
+      {% endif %}
+      
+  {% unless section.settings.full %}
+    </div>
+  </div>
+  {% endunless %}
+</section>
+
+{% schema %}
+{
+  "name": "Featured collection",
+  "class": "index-section",
+  "settings": [
+	{
+      "type": "checkbox",
+      "id": "full",
+      "label": "Show full width",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Products in Grid"
+    },
+    {
+      "id": "collection",
+      "type": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "select",
+      "id": "grid",
+      "label": "Products per row",
+      "default": "3",
+      "options": [
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "rows",
+      "label": "Rows",
+      "default": "2",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": "Show 'View all' button",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured collection",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}
