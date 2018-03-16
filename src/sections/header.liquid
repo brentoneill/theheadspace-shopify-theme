@@ -4,9 +4,9 @@
       <div class="row">
         <div class="top-header-inner col-sm-12">
           <div class="left-area">
-            <div class="{{ logo_classes }}">        
+            <div class="{{ logo_classes }}">
               {% if section.settings.logo %}
-              <a href="/" itemprop="url" class="site-header__logo-image">              
+              <a href="/" itemprop="url" class="site-header__logo-image">
                 <img src="{{ section.settings.logo | img_url: '231x' }}" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
               </a>
               {% else %}
@@ -15,22 +15,22 @@
             </div>
           </div>
           <div class="right-area">
-            <!-- Customer Links -->            
+            <!-- Customer Links -->
             {% if shop.customer_accounts_enabled %}
             <ul class="unstyled customer_accounts">
               {% if customer  %}
               <li class="toolbar-customer my-account"><a href="/account"><i class="fa fa-user"></i> {{ 'layout.customer.your_account' | t }}</a></li>
               {% comment %}<li class="toolbar-customer my-wishlist logged-wishlist"><a href="/pages/wish-list"><i class="fa fa-heart"></i>{{ 'layout.customer.wishlist' | t }}</a></li>{% endcomment %}
-			  <li>{% include 'iwish_v2' with 'iwishlink' %}</li>              
+			  <li>{% include 'iwish_v2' with 'iwishlink' %}</li>
               <li class="toolbar-customer log-out"><a href="/account/logout"><i class="fa fa-sign-out"></i> {{ 'layout.customer.logout' | t }}</a></li>
               {% else %}
-              <li class="toolbar-customer login-account">                    
+              <li class="toolbar-customer login-account">
                 <span id="loginButton" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="sub-dropdown1 visible-sm visible-md visible-lg"></i>
                   <i class="sub-dropdown visible-sm visible-md visible-lg"></i>
-                  <i class="fa fa-unlock-alt"></i>                                        
+                  <i class="fa fa-unlock-alt"></i>
                   {{ 'sections.header.top_header_login' | t | customer_login_link }}
-                </span>                    
+                </span>
                 <div id="loginBox" class="dropdown-menu text-left">
                   {% form 'customer_login' %}
                   <div id="bodyBox">
@@ -53,7 +53,7 @@
                       </li>
                       <li class="clearfix">
                         <button class="btn btn-1" type="submit">{{'layout.header.login_dropdown.login'|t}}</button>
-                      </li>                  
+                      </li>
                       <li class="clearfix">
                         <a class="action btn btn-3" href="/account/register">{{'layout.header.login_dropdown.create'|t}}</a>
                       </li>
@@ -63,34 +63,42 @@
                 </div>
               </li>
               <li class="toolbar-customer create-account">
-                {% if shop.customer_accounts_optional %}          
+                {% if shop.customer_accounts_optional %}
                 <i class="fa fa-key"></i>
                 {{ 'sections.header.top_header_register' | t | customer_register_link }}
                 {% endif %}
-              </li>  
+              </li>
               {% comment %}<li class="toolbar-customer my-wishlist"><a href="/pages/wish-list"><i class="fa fa-heart"></i>{{ 'sections.header.top_header_wishlist' | t }}</a></li>{% endcomment %}
-              
+
               <li>{% include 'iwish_v2' with 'iwishlink' %}</li>
-              
+
               {% endif %}
-              
-              <!-- Currency -->            
-              {% if settings.show_multiple_currencies %}
+
+              <!-- Currency -->
+              <!-- {% if settings.show_multiple_currencies %}
               <li class="currency_group">
                 <div class="currencies-switcher">
                   {% include 'currencies-switcher' with settings.currency_style %}
                 </div>
               </li>
-              {% endif %}
+              {% endif %} -->
               <li>
-                <a href="https://www.facebook.com/theheadspace" target="_blank"><img src="https://cdn.shopify.com/s/files/1/1898/4303/files/fb.jpg?10983765093033907911" alt="Follow us on Facebook" width="20"/></a>&nbsp&nbsp<a href="https://www.twitter.com/theheadspace" target="_blank"><img src="https://cdn.shopify.com/s/files/1/1898/4303/files/twitt.jpg?10983765093033907911" alt="Follow us on Twitter" width="20"/></a>&nbsp&nbsp<a href="https://www.instagram.com/theheadspace" target="_blank"><img src="https://cdn.shopify.com/s/files/1/1898/4303/files/insta.jpg?10983765093033907911" alt="Follow us on Instagram" width="20"/></a>
+                <a href="https://www.facebook.com/theheadspace" target="_blank">
+                  <img src="https://cdn.shopify.com/s/files/1/1898/4303/files/fb.jpg?10983765093033907911" alt="Follow us on Facebook" width="20"/>
+                </a>&nbsp&nbsp
+                <a href="https://www.twitter.com/theheadspace" target="_blank">
+                  <img src="https://cdn.shopify.com/s/files/1/1898/4303/files/twitt.jpg?10983765093033907911" alt="Follow us on Twitter" width="20"/>
+                </a>&nbsp&nbsp
+                <a href="https://www.instagram.com/theheadspace" target="_blank">
+                  <img src="https://cdn.shopify.com/s/files/1/1898/4303/files/insta.jpg?10983765093033907911" alt="Follow us on Instagram" width="20"/>
+                </a>
               </li>
               <li class="cartnav">
                 <a href="/cart">Cart</a>
-              </li>              
+              </li>
             </ul>
-            {% endif %}                
-          </div> 
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
@@ -102,10 +110,10 @@
     <div class="container">
       <div class="row">
         <div class="main-header-inner">
-          <div data-section-id="{{ section.id }}" data-section-type="header-section">             
+          <div data-section-id="{{ section.id }}" data-section-type="header-section">
             <div class="bottom_header">
               <nav class="site-nav small--hide" id="AccessibleNav" role="navigation">
-                {% include 'site-nav', nav_alignment: 'site-nav--centered', nav_link: section.settings.main_linklist %}              
+                {% include 'site-nav', nav_alignment: 'site-nav--centered', nav_link: section.settings.main_linklist %}
               </nav>
               <div class="right_bottom_header">
                 <div class="search_form">
@@ -113,7 +121,7 @@
                     {% include 'search-form' %}
                   </div>
                 </div>
- 
+
               </div>
             </div>
           </div>
@@ -130,10 +138,10 @@
   <div class="mobile-nav-header-wrapper">
     <div class="container">
       <div class="row">
-        <div class="mobile-nav-header-inner">                                            
-          <div class="mobile-top-navigation visible-xs">      
+        <div class="mobile-nav-header-inner">
+          <div class="mobile-top-navigation visible-xs">
             <button id="showLeftPush" class="visible-xs"><i class="fa fa-bars fa-2x"></i></button>
-            <ul class="list-inline">        
+            <ul class="list-inline">
               {% if shop.customer_accounts_enabled %}
               <li class="is-mobile-login">
                 <div class="btn-group">
@@ -169,12 +177,12 @@
 
               {% if section.settings.show_multiple_currencies %}
               <li class="is-mobile-currency currency_group">
-                <div class="currencies-switcher"> 
+                <div class="currencies-switcher">
                   {% include 'currencies-switcher' with settings.currency_style %}
                 </div>
               </li>
               {% endif %}
-              
+
               <li class="is-mobile-cart">
                 <a href="/cart" title="Shopping Cart">
                   <div class="num-items-in-cart">
@@ -211,7 +219,7 @@
         }
       }
       else{
-        if($('.main-header').hasClass('affix')){          
+        if($('.main-header').hasClass('affix')){
           $('.main-header').removeClass('affix').removeClass('animated');
         }
       }
@@ -241,7 +249,7 @@
       "type": "image_picker",
       "id": "logo",
       "label": "Logo image"
-    },       
+    },
 	{
         "type": "header",
         "content": "Phone Information"
@@ -255,7 +263,7 @@
         "type": "text",
         "id": "phone_text",
         "label": "Input Phone number"
-    },    
+    },
 	  {
         "type": "header",
         "content": "Navigation Setting"
@@ -265,7 +273,7 @@
         "id": "main_linklist",
         "label": "Select Link list for main Navigation",
         "default": "main-menu"
-      }, 
+      },
 	  {
         "type": "checkbox",
         "id": "nav_sticky",

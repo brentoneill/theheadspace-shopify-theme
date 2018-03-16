@@ -162,9 +162,9 @@ ul.dropdown-menu {background-color:grey; opacity: 0.8; height: 500px; overflow: 
   backface-visibility: $var;
 }
 @mixin border_radius($var) {
-  -moz-border-radius: $var; 
-  -webkit-border-radius: $var; 
-  border-radius: $var; 
+  -moz-border-radius: $var;
+  -webkit-border-radius: $var;
+  border-radius: $var;
 }
 @mixin box-shadow($var1, $var2, $var3, $var4, $var5) {
   -webkit-box-shadow: $var1 $var2 $var3 $var4 $var5;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
@@ -229,7 +229,7 @@ ul.dropdown-menu {background-color:grey; opacity: 0.8; height: 500px; overflow: 
 @mixin hover_effect_banner() {
   width: 100%;
 }
-/*placeholder*/ 
+/*placeholder*/
 ::-webkit-input-placeholder {
   @include placeholder($color_text_general);
 }
@@ -247,13 +247,13 @@ input:focus::-webkit-input-placeholder {
   @include opacity(1,100);
 }
 input:focus:-moz-placeholder { /* Firefox 18- */
-  color: transparent;  
+  color: transparent;
 }
 input:focus::-moz-placeholder {  /* Firefox 19+ */
-  color: transparent;  
+  color: transparent;
 }
-input:focus:-ms-input-placeholder {  
-  color: transparent;  
+input:focus:-ms-input-placeholder {
+  color: transparent;
 }
 /*End placeholder*/
 
@@ -382,7 +382,7 @@ input:focus:-ms-input-placeholder {
     @include transform_translateY(-50%);
   }
 }
-.search-bar__submit, 
+.search-bar__submit,
 .search-header__submit {
   @include display_inline();
   vertical-align: middle;
@@ -706,8 +706,6 @@ $height_header_mobile: 80px;
     .right_bottom_header{
       @include display_inline();
       float: right;
-      height: $height_menu;
-      line-height: 7;
       vertical-align: middle;
       @include transition(ease, all, 0.5s);
     }
@@ -974,7 +972,7 @@ $height_header_mobile: 80px;
     &+ .fix-sticky{
       height: 70px;
     }
-    .main-header-inner{ 
+    .main-header-inner{
       .site-nav {
         height: $height_sticky_menu;
         line-height: $height_sticky_menu;
@@ -1281,7 +1279,7 @@ $height_header_mobile: 80px;
             @include transition(ease, all, 0.5s);
             display: none;
             border: 1px solid $color_text_menu;
-          } 
+          }
           ul {
             > li {
               list-style: none;
@@ -1409,7 +1407,7 @@ $height_header_mobile: 80px;
   0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
   50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
   100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}	
+}
 .snow {
   background-color: transparent !important;
   opacity: 1 !important;
@@ -2149,7 +2147,7 @@ $color-slideshow-close-text: #000;
       @include opacity(0.5,50);
     }
   }
-} 
+}
 
 $slick-dot-size-small: 10px;
 
@@ -2348,7 +2346,7 @@ $color_title_tab: $color_text_title;
     margin-bottom: 0;
     padding: 0 10px;
     @include display_inline();
-    &:after, 
+    &:after,
     &:before {
       position: absolute;
       content: '';
@@ -2895,7 +2893,7 @@ $bg_next_pre: #f1f1f1;
           }
         }
       }
-      .rating-star, 
+      .rating-star,
       .rating-star-list {
         margin-top: 4px;
         .spr-badge {
@@ -2951,7 +2949,7 @@ $bg_next_pre: #f1f1f1;
           width: 100%;
         }
         .inner-mask {
-          form, 
+          form,
           ul.quickview-wishlist-wrapper {
             margin: 0;
             vertical-align: top;
@@ -4194,17 +4192,17 @@ $bg_filter: #323232;
       height: 30px;
       line-height: 30px;
       &:hover {
-        text-decoration: none; 
-        background-color: $color_hover_general; 
-        color: #fff; 
+        text-decoration: none;
+        background-color: $color_hover_general;
+        color: #fff;
         border-color: $color_hover_general;
       }
     }
     &.active {
       a, a:hover {
-        text-decoration: none; 
-        background-color: $color_hover_general; 
-        color: #fff; 
+        text-decoration: none;
+        background-color: $color_hover_general;
+        color: #fff;
         border-color: $color_hover_general;
       }
     }
@@ -4696,13 +4694,13 @@ $bg_filter: #323232;
                   border-right: 0;
                   .row-container {
                     .row-right {
-                      .list-mode-description, 
+                      .list-mode-description,
                       .grid-mode-description,
                       .hover-mask  {
                         display: none;
                       }
                     }
-                  }		
+                  }
                 }
               }
             }
@@ -4912,7 +4910,7 @@ $bg_filter: #323232;
       }
     }
   }
-} 
+}
 /*End Quickshop*/
 /*Shopping cart*/
 .cart-heading {
@@ -5578,7 +5576,7 @@ table {
               display: block;
               box-shadow: none;
               border-radius: 5px;
-              background-color: transparent; 
+              background-color: transparent;
               margin-bottom: 13px;
             }
             textarea {
@@ -6894,7 +6892,7 @@ $height_copyright: 90px;
       min-height: 390px;
     }
   }
-  
+
 }
 /*----------End Update for Gallery block----------*/
 
@@ -7113,7 +7111,7 @@ $height_copyright: 90px;
   0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
   50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
   100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}	
+}
 .snow {
   background-color: transparent !important;
   opacity: 1 !important;
@@ -7248,8 +7246,8 @@ body.is-touch .fb-nav span{ display: none; }
   #fb-loading div {background-image: url('//cdn.shopify.com/s/files/1/1898/4303/t/31/assets/fancybox_loading@2x.gif?6728400911524188858');background-size: 24px 24px;}
 }
 /*End Update 2.1.5 - Fancyblox*/
-    
-/*Update version 2.2.4 - Color filter*/    
+
+/*Update version 2.2.4 - Color filter*/
 .collection-content {
   .collection-content-wrapper {
     .collection-content-inner {
@@ -7283,9 +7281,9 @@ body.is-touch .fb-nav span{ display: none; }
     }
   }
 }
-/*End Update version 2.2.4 - Color filter*/  
+/*End Update version 2.2.4 - Color filter*/
 
-   
+
 /* Update version 3.0.2 */
 /*Top Loading*/
 #loader-div {
