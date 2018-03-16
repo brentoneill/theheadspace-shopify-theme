@@ -1,0 +1,559 @@
+{
+  "current": {
+    "color_text_general": "#434343",
+    "color_hover_general": "#333333",
+    "color_text_header": "#9e9e9e",
+    "color_text_menu": "#191919",
+    "color_text_heading": "#b3b3b3",
+    "color_text_title": "#808080",
+    "color_text_banner": "#ffffff",
+    "border_general": "#cccccc",
+    "border_header": "#f0f0f0",
+    "border_title": "#646464",
+    "border_submenu": "#555454",
+    "use_bg_image": false,
+    "shop_bg_color": "#ffffff",
+    "bkg_top_header": "#000000",
+    "bkg_main_header": "#ffffff",
+    "bkg_nav_header": "#ffffff",
+    "bkg_breadcrumb": "#f7f7f7",
+    "bkg_title": "#9b9b9b",
+    "bkg_logo_brand": "#ffffff",
+    "bkg_footer": "#000000",
+    "color_text_button": "#434343",
+    "color_border_button": "#434343",
+    "bkg_button": "#ffffff",
+    "color_text_button_hover": "#ffffff",
+    "bkg_button_hover": "#333333",
+    "color_border_button_hover": "#333333",
+    "color_text_button1": "#434343",
+    "color_border_button1": "#ffffff",
+    "bkg_button1": "#cacaca",
+    "color_text_button1_hover": "#ffffff",
+    "bkg_button1_hover": "#333333",
+    "color_border_button1_hover": "#333333",
+    "color_text_button2": "#ffffff",
+    "color_border_button2": "#ffffff",
+    "bkg_button2": "rgba(0,0,0,0)",
+    "color_text_button2_hover": "#ffffff",
+    "bkg_button2_hover": "#333333",
+    "color_border_button2_hover": "#333333",
+    "bg_alignment": "tiled entire",
+    "base_font": "Helvetica, Arial, sans-serif",
+    "header_font": "Helvetica, Arial, sans-serif",
+    "misc_font": "Helvetica, Arial, sans-serif",
+    "general_loadingscreen": true,
+    "mailing_list_active": false,
+    "news_title": "Register Now and Get 10% OFF Initial Purchase",
+    "news_sub": "",
+    "news_input": "Enter your email address...",
+    "mailchimp_form_action": "https://codespot.us5.list-manage.com/subscribe/post?u=ed73bc2d2f8ae97778246702e&amp;id=7e4b1b42ec",
+    "news_ignore": "Don't show this popup again",
+    "news_time": "20",
+    "general_gototop": true,
+    "show_multiple_currencies": true,
+    "currency_format": "money_format",
+    "supported_currencies": "USD",
+    "default_currency": "USD",
+    "product_hover_effect": true,
+    "ajax_active": true,
+    "ajax_timeout": "20",
+    "blog_show_author": true,
+    "blog_show_date": true,
+    "password_link": "Enter using password",
+    "password_opening_soon": "Opening Soon",
+    "password_signup_form_success": "We will send you an email right before we open!",
+    "password_signup_form_heading": "Find out when we open:",
+    "password_spread_the_word": "Spread the word:",
+    "password_signup_form_email_label": "Email",
+    "password_signup_form_email_placeholder": "Your email",
+    "password_signup_form_submit": "Submit",
+    "password_powered_by_shopify_html": "This shop will be powered by",
+    "password_login_form_heading": "Enter store using password:",
+    "password_login_form_password_label": "Password",
+    "password_login_form_password_placeholder": "Your password",
+    "password_login_form_submit": "Enter",
+    "password_admin_link_html": "Are you the store owner? <a href=\"/admin\" class=\"text-link\">Log in here</a>",
+    "password_close": "Close (Esc)",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": false,
+    "share_google": false,
+    "favicon": "shopify://shop_images/favicon.png",
+    "checkout_header_image": "",
+    "checkout_use_storefront_logo": false,
+    "checkout_logo_image": "shopify://shop_images/HSMainHor_91b796e7-20e8-4e1e-b153-fafab514e85c.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "large",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#000000",
+    "checkout_heading_font": "Helvetica Neue",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#3a3b3b",
+    "checkout_button_color": "#39393a",
+    "checkout_error_color": "#ff6d6d",
+    "social_twitter_link": "",
+    "social_facebook_link": "",
+    "social_pinterest_link": "",
+    "social_instagram_link": "",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "checkout_use_header_image": false,
+    "checkout_logo": "",
+    "checkout_use_body_background_image": false,
+    "checkout_use_sidebar_background_image": false,
+    "vendor_enable": true,
+    "color_text": "#3d4246",
+    "color_body_text": "#788188",
+    "color_sale_text": "#7796A8",
+    "color_borders": "#e8e9eb",
+    "color_button": "#7796A8",
+    "color_button_text": "#fff",
+    "color_small_button": "#fff",
+    "color_small_button_text": "#3d4246",
+    "color_text_field": "#fff",
+    "color_text_field_text": "#000",
+    "color_image_overlay_text": "#fff",
+    "color_image_overlay": "#3d4246",
+    "image_overlay_opacity": "0.25",
+    "color_body_bg": "#fff",
+    "type_header_family": "Google_Work+Sans_600_sans",
+    "type_header_base_size": "26px",
+    "type_base_family": "Google_Work+Sans_400_sans",
+    "type_base_size": "16px",
+    "type_bold_product_titles": false,
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify://shop_images/HSMainHor_white.png",
+          "show_phone": false,
+          "phone_text": "",
+          "main_linklist": "main-menu",
+          "nav_sticky": true,
+          "megamenu_items_1": "Wholesale",
+          "mega_linklist_1": "men",
+          "mega_linklist_2": "women",
+          "mega_linklist_3": "accessories",
+          "mega-bg-01": "",
+          "display_menu_image_1": false,
+          "megamenu_items_2": "",
+          "megamenu_text_2": "<img src=\"https://cdn.shopify.com/s/files/1/1526/1120/files/logo_0dbda77f-d4d2-470e-9d39-9f409fb1638b.png?16331139439953991189\" alt=\"Shopify Template | DesignShopify\">\r\n<p>Lanvin flats seam cotton minimal Saint Laurent midi Céline la marinière. Powder blue playsuit oversized sweatshirt.</p>\r\n<p>Dress Jil Sander Vasari chambray boots luxe. Statement button up navy blue slip dress skinny jeans indigo white shirt.</p>",
+          "mega_linklist_4": "",
+          "mega_linklist_5": "",
+          "mega_linklist_6": "",
+          "mega-bg-02": "",
+          "display_menu_image_2": false
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "footer_info_show": true,
+          "fi_about_show": true,
+          "fi_about_title": "About us",
+          "fi_about": "<div class=\"top\">We are an eco-conscious brand in harmony with the Earth. We use recycled water bottles and eco-safe dyes which create the most vibrant and clear prints on clothing you could imagine.</div>\r\n<div class=\"bottom\">\r\n<div class=\"address\">\r\n<div class=\"email\">\r\n<i class=\"fa fa-envelope\"></i> brett@theheadspace.net</div>\r\n</div>\r\n</div>",
+          "useful_show": true,
+          "useful_title": "Sitemap",
+          "useful_link1": "footer",
+          "fi_follow_title": "Follow Us",
+          "twitter_link": "https://twitter.com/theheadspace",
+          "facebook_link": "https://www.facebook.com/theheadspace",
+          "google_link": "",
+          "youtube_link": "",
+          "vimeo_link": "",
+          "pinterest_link": "",
+          "instagram_link": "https://instagram.com/theheadspace",
+          "tumblr_link": "",
+          "atom_link": "",
+          "footer_newsletter_enable": true,
+          "footer_newsletter_heading": "Sign up for Newsletter",
+          "footer_newsletter_subtext": "Sign up for the latest news, offers and styles",
+          "mailing_list_form_action": "https://theheadspace.us5.list-manage.com/subscribe/post?u=1a122d0448633b45d497d81f5&amp;id=7e4b1b42ec",
+          "accept_visa": true,
+          "accept_mastercard": true,
+          "accept_amex": false,
+          "accept_discover": true,
+          "accept_paypal": true,
+          "accept_google": false,
+          "accept_bitcoin": false
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "layout": "grid",
+          "grid": "4",
+          "rows": "6",
+          "collection_banner": false,
+          "collection_banner_img": "",
+          "collection_image": false,
+          "collection_desc": false,
+          "collection_showing": true,
+          "collection_grid_list": true,
+          "collection_sort": true,
+          "enable_tagsfilter": true,
+          "enable_openfilter": false,
+          "group_tag_1_label": "Price",
+          "group_tag_1": "$10+,$20+,$30+,$40+,$50+,$60+,$80+,$100+",
+          "group_tag_2_label": "",
+          "group_tag_2": "",
+          "group_tag_3_label": "",
+          "group_tag_3": "",
+          "group_tag_4_label": "",
+          "group_tag_4": ""
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "enable_breadcrumb": true,
+          "color_swatch": true,
+          "product_hover_effect": true,
+          "product_coloravailable": true,
+          "enable_rating_star": true,
+          "enable_quickoverview": true,
+          "detail_qov_lenght": "200",
+          "display_quantity_dropdown": true,
+          "display_wishlist": true,
+          "display_tags": true,
+          "image_size": "medium",
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_share_buttons": true,
+          "ajax_active": true,
+          "ajax_timeout": "20",
+          "display_tab": true,
+          "product_tab_desc": false,
+          "product_tab_customerreview": true,
+          "product_tab_delivery": false,
+          "product_tab_delivery_content": "<h2>Purchasing & Delivery</h2>\r\n<h5>Before You Buy</h5>\r\n<p>To avoid delivery day disappointments, measure the area you plan to place your new furniture in, as well as the furniture you have selected to purchase, before placing your order. Also measure any doorways (height and width) through which the furniture must pass to get to its final position in your home. Identify any delivery obstacles – is there enough ceiling clearance? Will the furniture clear the stairway or elevator? Can the piece be maneuvered around any right angles? Because of our commitment to providing you with outstanding customer service.</p>\r\n<h5>Delivery</h5>\r\n<p>Always free shipping</p>",
+          "product_tab_warranty": false,
+          "product_tab_warranty_content": "<h2>Warranty Information</h2>\r\n<p>LIMITED WARRANTIES<br>Limited Warranties are non-transferable. The following Limited Warranties are given to the original retail purchaser of the following Ashley Furniture Industries, Inc.Products:</p>\r\n<p>Frames Used In Upholstered and Leather Products<br>Limited Lifetime Warranty<br> A Limited Lifetime Warranty applies to all frames used in sofas, couches, love seats, upholstered chairs, ottomans, sectionals, and sleepers. Ashley Furniture Industries,Inc. warrants these components to you, the original retail purchaser, to be free from material manufacturing defects.</p>",
+          "product_tab_payment": false,
+          "product_tab_payment_content": "<h2>Payment  Information</h2>\r\n<p>Dust or wipe clean with a cloth dampened with water once a week. Be sure not to leave water spots on the surface. These water spots will dry and could possibly leave permanent marks.</p>\r\n<p>Clean stains/spots using the following steps:\r\nDampen a soft cloth with a mixture of hot water and liquid dishwashing detergent.\r\nWring the cloth as much as possible to remove excess liquid. \r\nRub the surface lightly in a circular motion.\r\nDry the surface immediately with a clean, soft towel.</p>",
+          "show_related_products": true,
+          "social_sharing_products": true,
+          "social_sharing_count": true,
+          "social_sharing_style": "",
+          "share_facebook": true,
+          "share_twitter": true,
+          "share_pinterest": true,
+          "share_fancy": false,
+          "share_google": false
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "blog_num": "3",
+          "blog_recent_show": true,
+          "blog_recent_title": "Recent articles",
+          "blog_recent_blog": "news",
+          "blog_recent_number": "3",
+          "side_banner_show": true,
+          "blog_sidebar": "",
+          "blog_sidebar2": ""
+        }
+      },
+      "contact-template": {
+        "type": "contact-template",
+        "settings": {
+          "contact_title": "Let Us Know",
+          "contact_map": false,
+          "contact_type": "ROADMAP",
+          "contact_zoom": "14",
+          "contact_address": "",
+          "contact_scroll": false
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "show_share_buttons": true,
+          "blog_recent_show": true,
+          "blog_recent_title": "Recent articles",
+          "blog_recent_blog": "news",
+          "blog_recent_number": "3",
+          "side_banner_show": true,
+          "blog_sidebar": "",
+          "blog_sidebar2": ""
+        }
+      },
+      "1478508798679": {
+        "type": "home-product-slider",
+        "settings": {
+          "title": "BEST SELLING",
+          "collection": "popular-products",
+          "limit": "18",
+          "auto": true,
+          "time": "5000",
+          "grid": "4",
+          "grid2": "3",
+          "grid3": "3",
+          "grid4": "2",
+          "grid5": "1"
+        }
+      },
+      "1494009094710": {
+        "type": "banners",
+        "blocks": {
+          "1494009094710-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/camerongray.jpg",
+              "link": "shopify://collections/cameron-gray"
+            }
+          },
+          "1494009094710-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/chrisdyer.jpg",
+              "link": "shopify://collections/chris-dyer"
+            }
+          },
+          "1494009094710-2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/moniquemunoz.jpg",
+              "link": "shopify://collections/monique-munoz"
+            }
+          },
+          "1494009918375": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/mugwort.jpg",
+              "link": "shopify://collections/mugwort"
+            }
+          },
+          "1505158918747": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Enon_SMALL_SQUARE_a535d2c0-2511-443a-a5f7-4df343c083aa.jpg",
+              "link": "shopify://collections/sam-farrand"
+            }
+          }
+        },
+        "block_order": [
+          "1494009094710-0",
+          "1494009094710-1",
+          "1494009094710-2",
+          "1494009918375",
+          "1505158918747"
+        ],
+        "settings": {
+          "padding": false
+        }
+      },
+      "1494010211736": {
+        "type": "custom-content",
+        "blocks": {
+          "1494010241233": {
+            "type": "html",
+            "settings": {
+              "code": "<h1 style=\"text-align:center;margin-top:50px;margin-bottom:-40px;\">Featured Artists</h1>",
+              "width": "50%"
+            }
+          }
+        },
+        "block_order": [
+          "1494010241233"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "1494011383331": {
+        "type": "custom-content",
+        "blocks": {
+          "1494011397386": {
+            "type": "html",
+            "settings": {
+              "code": "<h1 style=\"text-align:center;margin-top:50px;\">Shop Our Insta</h1><br>\r\n<script src=\"https://like2have.it/embed.js?id=f8168190-b899-4f04-80e7-f4e0ec6c088f&size=large\" id=\"l2h-widget-f8168190-b899-4f04-80e7-f4e0ec6c088f\" async=\"\"></script>\r\n<br><br>",
+              "width": "100%"
+            }
+          }
+        },
+        "block_order": [
+          "1494011397386"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "page-faqs": {
+        "type": "page-faqs",
+        "settings": {
+          "faq-text1-head": "Can I return / exchange an item?",
+          "faq-text1-cont": "We do not process returns, but we do process exchanges within 15 days of receiving the product if it has not been used. All exchanges are made for store credit. All sales on clearance items are final and cannot be exchanged, clearance items or items sent back to us after 15 days without prior approval will not be processed. To make an exchange please send your item along with a note bearing your name, and your E-Mail address. Once we receive your exchange, we will send an e-mail with a coupon code for the amount of the exchanged item(s). Send to: The Headspace Attn: Returns 5725 W. 2nd Ave Lakewood, CO 80226",
+          "faq-text2-head": "When will my order ship?",
+          "faq-text2-cont": "We have a 0-3 business day handling period. (M-F)",
+          "faq-text3-head": "I’ve waited longer than 3 days, where is my order?",
+          "faq-text3-cont": "Please check your order confirmation email. If it says “Back-ordered” that means you clicked a red button that said \"Available for Backorder\" in place of where \"Add to Cart\" would have been. Those take 1-45 days April-December, up to 90 days January - March. Unlike other all over print websites with no actual stock, our clothing is in stock on our shelves, so we recommend taking advantage and avoiding back-ordered items.",
+          "faq-text4-head": "Is it safe to spin fire in The Headspace apparel?",
+          "faq-text4-cont": "The Headspace apparel is made from recycled polyester, which is a highly-flammable and very dangerous to spin fire in. We advise our audience to avoid playing with fire toys while wearing polyester clothing.",
+          "faq-text5-head": "Can I change my address after I place my order?",
+          "faq-text5-cont": "Yes, if it hasn’t been shipped. Email – brett@theheadspace.net",
+          "faq-text6-head": "Can I change the products in my order before they’re shipped?",
+          "faq-text6-cont": "No.",
+          "faq-text7-head": "Can I Cancel my Backorder?",
+          "faq-text7-cont": "No."
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_notes_enable": false
+        }
+      },
+      "1495295793779": {
+        "type": "home-tabs",
+        "blocks": {
+          "1495295793779-0": {
+            "type": "featured_collection",
+            "settings": {
+              "title": "",
+              "collection": "clearance"
+            }
+          }
+        },
+        "block_order": [
+          "1495295793779-0"
+        ],
+        "settings": {
+          "title": "Clearance",
+          "grid": "4",
+          "rows": "2"
+        }
+      },
+      "1495384601725": {
+        "type": "banners",
+        "blocks": {
+          "1495384601725-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/shopwomens_2ac73981-3dc0-4d99-8546-9aa0edee8996.png",
+              "link": "shopify://collections/women"
+            }
+          },
+          "1495384601725-2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/shopacc.png",
+              "link": "shopify://collections/accessories"
+            }
+          },
+          "1495384645855": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/shopclearance_4f2ca746-fa93-4140-89f7-355cd1bed711.png",
+              "link": "shopify://collections/clearance"
+            }
+          },
+          "1495384862966": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/shopmens_f0e0fbb1-9012-4a03-b749-cba2bc9fe9d6.png",
+              "link": "shopify://collections/men"
+            }
+          }
+        },
+        "block_order": [
+          "1495384601725-0",
+          "1495384601725-2",
+          "1495384645855",
+          "1495384862966"
+        ],
+        "settings": {
+          "padding": false
+        }
+      },
+      "1511463169410": {
+        "type": "custom-content",
+        "blocks": {
+          "1514515878548": {
+            "type": "html",
+            "settings": {
+              "code": "<div style=\"background-image:url('https://cdn.shopify.com/s/files/1/1898/4303/files/galaxy.jpg?8504242719722020597'); padding: 20px 5px;\">\n<div style=\"width:100%;\"><center><h1 style=\"color:#fff; font-size:47px; background-color:#000;\">Clearance Event <br>\n</h1></center></div>\n<br><center><div>\n<a href=\"https://theheadspace.net/collections/women-clearance\" target=\"_blank\"><img src=\"https://cdn.shopify.com/s/files/1/1898/4303/files/womenclearance2.png?14028342540104115512\"></a>   <a href=\"https://theheadspace.net/collections/men-clearance\" target=\"_blank\"><img src=\"https://cdn.shopify.com/s/files/1/1898/4303/files/menclearance2.png?14028342540104115512\"></a>\n</div></center>\n</div>",
+              "width": "50%"
+            }
+          }
+        },
+        "block_order": [
+          "1514515878548"
+        ],
+        "settings": {
+          "title": ""
+        }
+      }
+    },
+    "content_for_index": [
+      "1511463169410",
+      "1478508798679",
+      "1495384601725",
+      "1495295793779",
+      "1494010211736",
+      "1494009094710",
+      "1494011383331"
+    ]
+  },
+  "presets": {
+    "Default": {
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {}
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {}
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {}
+        },
+        "footer": {
+          "type": "footer",
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "feature-row",
+        "slideshow"
+      ]
+    }
+  }
+}
