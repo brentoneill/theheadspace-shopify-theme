@@ -1,0 +1,19 @@
+{
+  "name": "headspace-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "slate watch",
+    "start:dev": "slate start --env development",
+    "start:prod": "slate start --env production",
+    "deploy:dev": "slate deploy --env development",
+    "deploy:prod": "slate deploy --env production",
+    "build": "slate build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@shopify/slate": "^0.13.0"
+  }
+}
