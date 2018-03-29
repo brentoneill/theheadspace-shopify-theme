@@ -3,7 +3,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{ shop.locale }}"> <!--<![endif]-->
 <head>
   <script>window.wh_metafields = {};
-    {% if customer.tags.size > 0 %} window.wh_customer_tags = true; {% endif %} 
+    {% if customer.tags.size > 0 %} window.wh_customer_tags = true; {% endif %}
     window.wh_discount_value = 1;
   </script>
   <meta charset="utf-8">
@@ -44,9 +44,9 @@
   {{ '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' | stylesheet_tag }}
   {{ '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' | stylesheet_tag }}
   {{ 'animate.min.css' | asset_url | stylesheet_tag }}
-  {{ 'owl.carousel.css' | asset_url | stylesheet_tag }}    
-  {{ 'cs-everything.global.scss.css' | asset_url | stylesheet_tag }} 
-  {{ 'cs-everything.styles.scss.css' | asset_url | stylesheet_tag }} 
+  {{ 'owl.carousel.css' | asset_url | stylesheet_tag }}
+  {{ 'cs-everything.global.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'cs-everything.styles.scss.css' | asset_url | stylesheet_tag }}
 
   <!--   {{ 'theme.scss.css' | asset_url | stylesheet_tag }} -->
   {% include 'google-fonts' %}
@@ -81,13 +81,13 @@
   {% include 'bold-common' %}
   {{ 'bold-lp.css' | asset_url | stylesheet_tag }}
 
-  {{ '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' | script_tag }}  
+  {{ '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' | script_tag }}
   {{ 'option_selection.js' | shopify_asset_url | script_tag }}
   {{ 'api.jquery.js' | shopify_asset_url | script_tag }}
-  {{ 'scripts.js' | asset_url | script_tag }}  
+  {{ 'scripts.js' | asset_url | script_tag }}
   {{ '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js' | script_tag }}
   {{ 'imagesloaded.pkgd.min.js' | asset_url | script_tag }}
-  {{ 'owl.carousel.min.js' | asset_url | script_tag }}  
+  {{ 'owl.carousel.min.js' | asset_url | script_tag }}
   {{ 'jquery.zoom.js' | asset_url | script_tag }}
   {{ 'jquery.fancybox.js' | asset_url | script_tag }}
   {% if template == 'page.contact' %}
@@ -101,15 +101,15 @@
 
   {% if settings.general_loadingscreen %}
   <!-- Preloading -->
-  <div id="loader-div">
+  <!-- <div id="loader-div">
     <div id="loader-wrapper">
       <div class="loader">
         <svg class="circular">
           <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
         </svg>
       </div>
-    </div>    
-  </div>
+    </div>
+  </div> -->
   {% endif %}
 
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
@@ -149,20 +149,20 @@
   {% if settings.general_gototop %}
   <div id="scroll-to-top" data-toggle="tooltip" data-placement="top" title="Scroll to Top">
     <i class="fa fa-angle-up"></i>
-  </div>  
+  </div>
   {% endif %}
 
   {% if settings.mailing_list_active %}
-  {% include 'newsletter_popup' %}  
+  {% include 'newsletter_popup' %}
   {% endif %}
 
   <script type="text/javascript">
-    var cart_money_format={{ shop.money_format | strip_html | json }}; 
+    var cart_money_format={{ shop.money_format | strip_html | json }};
     var money_format_update="<span class='money'>{{ shop.money_format | strip_html }}</span>";
-  </script> 
+  </script>
   {{ 'modernizr.js' | asset_url | script_tag }}
   {{ 'jquery.smooth-scroll.min.js' | asset_url | script_tag }}
-  {{ 'classie.js' | asset_url | script_tag }}  
+  {{ 'classie.js' | asset_url | script_tag }}
   {{ 'cs-everything.cart.js' | asset_url | script_tag }}
   {{ 'cs-everything.script.js' | asset_url | script_tag }}
 
@@ -170,7 +170,7 @@
   {% include 'currencies' %}
   {% include 'ajax-cart' %}
 
-  {{ 'linkOptionSelectors.js' | asset_url | script_tag }} 
+  {{ 'linkOptionSelectors.js' | asset_url | script_tag }}
 
   {% if product %}
   <script>
