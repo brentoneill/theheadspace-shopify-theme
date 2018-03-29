@@ -20,7 +20,7 @@
             <li class="list-title">{{ list.title }}</li>
             {% for link in list.links %}
             <li class="list-unstyled li-sub-mega">
-              <a href="{{ link.url }}">{{ link.title | escape }}</a>           
+              <a href="{{ link.url }}">{{ link.title | escape }}</a>
             </li>
             {% endfor %}
           </ul>
@@ -33,7 +33,7 @@
             <li class="list-title">{{ list.title }}</li>
             {% for link in list.links %}
             <li class="list-unstyled li-sub-mega">
-              <a href="{{ link.url }}">{{ link.title | escape }}</a>           
+              <a href="{{ link.url }}">{{ link.title | escape }}</a>
             </li>
             {% endfor %}
           </ul>
@@ -46,13 +46,13 @@
             <li class="list-title">{{ list.title }}</li>
             {% for link in list.links %}
             <li class="list-unstyled li-sub-mega">
-              <a href="{{ link.url }}">{{ link.title | escape }}</a>           
+              <a href="{{ link.url }}">{{ link.title | escape }}</a>
             </li>
             {% endfor %}
           </ul>
         </li>
         {% endif %}
-        {% if section.settings.display_menu_image_1 %}        
+        {% if section.settings.display_menu_image_1 %}
         <li class="col-img">
           <img src="{{ section.settings.mega-bg-01 | img_url: '300x' }}" alt="Mega menu image 1" />
         </li>
@@ -68,7 +68,7 @@
         });
       </script>
       {% endif%}
-    </div>  
+    </div>
     {% endif %}
 
     {% if section.settings.megamenu_items_2 == l.title %}
@@ -87,7 +87,7 @@
             <li class="list-title">{{ list.title }}</li>
             {% for link in list.links %}
             <li class="list-unstyled li-sub-mega">
-              <a href="{{ link.url }}">{{ link.title | escape }}</a>           
+              <a href="{{ link.url }}">{{ link.title | escape }}</a>
             </li>
             {% endfor %}
           </ul>
@@ -100,7 +100,7 @@
             <li class="list-title">{{ list.title }}</li>
             {% for link in list.links %}
             <li class="list-unstyled li-sub-mega">
-              <a href="{{ link.url }}">{{ link.title | escape }}</a>           
+              <a href="{{ link.url }}">{{ link.title | escape }}</a>
             </li>
             {% endfor %}
           </ul>
@@ -113,7 +113,7 @@
             <li class="list-title">{{ list.title }}</li>
             {% for link in list.links %}
             <li class="list-unstyled li-sub-mega">
-              <a href="{{ link.url }}">{{ link.title | escape }}</a>           
+              <a href="{{ link.url }}">{{ link.title | escape }}</a>
             </li>
             {% endfor %}
           </ul>
@@ -130,13 +130,13 @@
         });
       </script>
       {% endif%}
-    </div>  
+    </div>
     {% endif %}
   </li>
 
   {% else %}
 
-  {% if linklists[submenu].links.size > 0 %}
+  {% if linklists[submenu].links.size > 1 %}
   <li class="nav-item{% if l.active %} active{% endif %} dropdown navigation">
     <a href="{{ l.url }}" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
       <span>{{ l.title }}</span>
