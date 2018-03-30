@@ -47,7 +47,7 @@
     "news_title": "Register Now and Get 10% OFF Initial Purchase",
     "news_sub": "",
     "news_input": "Enter your email address...",
-    "mailchimp_form_action": "https://codespot.us5.list-manage.com/subscribe/post?u=ed73bc2d2f8ae97778246702e&amp;id=7e4b1b42ec",
+    "mailchimp_form_action": "https:\/\/codespot.us5.list-manage.com\/subscribe\/post?u=ed73bc2d2f8ae97778246702e&amp;id=7e4b1b42ec",
     "news_ignore": "Don't show this popup again",
     "news_time": "20",
     "general_gototop": true,
@@ -73,16 +73,16 @@
     "password_login_form_password_label": "Password",
     "password_login_form_password_placeholder": "Your password",
     "password_login_form_submit": "Enter",
-    "password_admin_link_html": "Are you the store owner? <a href=\"/admin\" class=\"text-link\">Log in here</a>",
+    "password_admin_link_html": "Are you the store owner? <a href=\"\/admin\" class=\"text-link\">Log in here<\/a>",
     "password_close": "Close (Esc)",
     "share_facebook": true,
     "share_twitter": true,
     "share_pinterest": false,
     "share_google": false,
-    "favicon": "shopify://shop_images/favicon.png",
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
     "checkout_header_image": "",
     "checkout_use_storefront_logo": false,
-    "checkout_logo_image": "shopify://shop_images/HSMainHor_91b796e7-20e8-4e1e-b153-fafab514e85c.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/HSMainHor_91b796e7-20e8-4e1e-b153-fafab514e85c.png",
     "checkout_logo_position": "center",
     "checkout_logo_size": "large",
     "checkout_body_background_image": "",
@@ -131,7 +131,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo": "shopify://shop_images/HSMainHor_white.png",
+          "logo": "shopify:\/\/shop_images\/HSMainHor_white.png",
           "show_phone": false,
           "phone_text": "",
           "main_linklist": "main-menu",
@@ -143,7 +143,7 @@
           "mega-bg-01": "",
           "display_menu_image_1": false,
           "megamenu_items_2": "",
-          "megamenu_text_2": "<img src=\"https://cdn.shopify.com/s/files/1/1526/1120/files/logo_0dbda77f-d4d2-470e-9d39-9f409fb1638b.png?16331139439953991189\" alt=\"Shopify Template | DesignShopify\">\r\n<p>Lanvin flats seam cotton minimal Saint Laurent midi Céline la marinière. Powder blue playsuit oversized sweatshirt.</p>\r\n<p>Dress Jil Sander Vasari chambray boots luxe. Statement button up navy blue slip dress skinny jeans indigo white shirt.</p>",
+          "megamenu_text_2": "<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/1526\/1120\/files\/logo_0dbda77f-d4d2-470e-9d39-9f409fb1638b.png?16331139439953991189\" alt=\"Shopify Template | DesignShopify\">\r\n<p>Lanvin flats seam cotton minimal Saint Laurent midi Céline la marinière. Powder blue playsuit oversized sweatshirt.<\/p>\r\n<p>Dress Jil Sander Vasari chambray boots luxe. Statement button up navy blue slip dress skinny jeans indigo white shirt.<\/p>",
           "mega_linklist_4": "",
           "mega_linklist_5": "",
           "mega_linklist_6": "",
@@ -157,24 +157,24 @@
           "footer_info_show": true,
           "fi_about_show": true,
           "fi_about_title": "About us",
-          "fi_about": "<div class=\"top\">We are an eco-conscious brand in harmony with the Earth. We use recycled water bottles and eco-safe dyes which create the most vibrant and clear prints on clothing you could imagine.</div>\r\n<div class=\"bottom\">\r\n<div class=\"address\">\r\n<div class=\"email\">\r\n<i class=\"fa fa-envelope\"></i> brett@theheadspace.net</div>\r\n</div>\r\n</div>",
+          "fi_about": "<div class=\"top\">We are an eco-conscious brand in harmony with the Earth. We use recycled water bottles and eco-safe dyes which create the most vibrant and clear prints on clothing you could imagine.<\/div>\r\n<div class=\"bottom\">\r\n<div class=\"address\">\r\n<div class=\"email\">\r\n<i class=\"fa fa-envelope\"><\/i> brett@theheadspace.net<\/div>\r\n<\/div>\r\n<\/div>",
           "useful_show": true,
           "useful_title": "Sitemap",
           "useful_link1": "footer",
           "fi_follow_title": "Follow Us",
-          "twitter_link": "https://twitter.com/theheadspace",
-          "facebook_link": "https://www.facebook.com/theheadspace",
+          "twitter_link": "https:\/\/twitter.com\/theheadspace",
+          "facebook_link": "https:\/\/www.facebook.com\/theheadspace",
           "google_link": "",
           "youtube_link": "",
           "vimeo_link": "",
           "pinterest_link": "",
-          "instagram_link": "https://instagram.com/theheadspace",
+          "instagram_link": "https:\/\/instagram.com\/theheadspace",
           "tumblr_link": "",
           "atom_link": "",
           "footer_newsletter_enable": true,
           "footer_newsletter_heading": "Sign up for Newsletter",
           "footer_newsletter_subtext": "Sign up for the latest news, offers and styles",
-          "mailing_list_form_action": "https://theheadspace.us5.list-manage.com/subscribe/post?u=1a122d0448633b45d497d81f5&amp;id=7e4b1b42ec",
+          "mailing_list_form_action": "https:\/\/theheadspace.us5.list-manage.com\/subscribe\/post?u=1a122d0448633b45d497d81f5&amp;id=7e4b1b42ec",
           "accept_visa": true,
           "accept_mastercard": true,
           "accept_amex": false,
@@ -232,11 +232,11 @@
           "product_tab_desc": false,
           "product_tab_customerreview": true,
           "product_tab_delivery": false,
-          "product_tab_delivery_content": "<h2>Purchasing & Delivery</h2>\r\n<h5>Before You Buy</h5>\r\n<p>To avoid delivery day disappointments, measure the area you plan to place your new furniture in, as well as the furniture you have selected to purchase, before placing your order. Also measure any doorways (height and width) through which the furniture must pass to get to its final position in your home. Identify any delivery obstacles – is there enough ceiling clearance? Will the furniture clear the stairway or elevator? Can the piece be maneuvered around any right angles? Because of our commitment to providing you with outstanding customer service.</p>\r\n<h5>Delivery</h5>\r\n<p>Always free shipping</p>",
+          "product_tab_delivery_content": "<h2>Purchasing & Delivery<\/h2>\r\n<h5>Before You Buy<\/h5>\r\n<p>To avoid delivery day disappointments, measure the area you plan to place your new furniture in, as well as the furniture you have selected to purchase, before placing your order. Also measure any doorways (height and width) through which the furniture must pass to get to its final position in your home. Identify any delivery obstacles – is there enough ceiling clearance? Will the furniture clear the stairway or elevator? Can the piece be maneuvered around any right angles? Because of our commitment to providing you with outstanding customer service.<\/p>\r\n<h5>Delivery<\/h5>\r\n<p>Always free shipping<\/p>",
           "product_tab_warranty": false,
-          "product_tab_warranty_content": "<h2>Warranty Information</h2>\r\n<p>LIMITED WARRANTIES<br>Limited Warranties are non-transferable. The following Limited Warranties are given to the original retail purchaser of the following Ashley Furniture Industries, Inc.Products:</p>\r\n<p>Frames Used In Upholstered and Leather Products<br>Limited Lifetime Warranty<br> A Limited Lifetime Warranty applies to all frames used in sofas, couches, love seats, upholstered chairs, ottomans, sectionals, and sleepers. Ashley Furniture Industries,Inc. warrants these components to you, the original retail purchaser, to be free from material manufacturing defects.</p>",
+          "product_tab_warranty_content": "<h2>Warranty Information<\/h2>\r\n<p>LIMITED WARRANTIES<br>Limited Warranties are non-transferable. The following Limited Warranties are given to the original retail purchaser of the following Ashley Furniture Industries, Inc.Products:<\/p>\r\n<p>Frames Used In Upholstered and Leather Products<br>Limited Lifetime Warranty<br> A Limited Lifetime Warranty applies to all frames used in sofas, couches, love seats, upholstered chairs, ottomans, sectionals, and sleepers. Ashley Furniture Industries,Inc. warrants these components to you, the original retail purchaser, to be free from material manufacturing defects.<\/p>",
           "product_tab_payment": false,
-          "product_tab_payment_content": "<h2>Payment  Information</h2>\r\n<p>Dust or wipe clean with a cloth dampened with water once a week. Be sure not to leave water spots on the surface. These water spots will dry and could possibly leave permanent marks.</p>\r\n<p>Clean stains/spots using the following steps:\r\nDampen a soft cloth with a mixture of hot water and liquid dishwashing detergent.\r\nWring the cloth as much as possible to remove excess liquid. \r\nRub the surface lightly in a circular motion.\r\nDry the surface immediately with a clean, soft towel.</p>",
+          "product_tab_payment_content": "<h2>Payment  Information<\/h2>\r\n<p>Dust or wipe clean with a cloth dampened with water once a week. Be sure not to leave water spots on the surface. These water spots will dry and could possibly leave permanent marks.<\/p>\r\n<p>Clean stains\/spots using the following steps:\r\nDampen a soft cloth with a mixture of hot water and liquid dishwashing detergent.\r\nWring the cloth as much as possible to remove excess liquid. \r\nRub the surface lightly in a circular motion.\r\nDry the surface immediately with a clean, soft towel.<\/p>",
           "show_related_products": true,
           "social_sharing_products": true,
           "social_sharing_count": true,
@@ -306,36 +306,36 @@
           "1494009094710-0": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/camerongray.jpg",
-              "link": "shopify://collections/cameron-gray"
+              "image": "shopify:\/\/shop_images\/camerongray.jpg",
+              "link": "shopify:\/\/collections\/cameron-gray"
             }
           },
           "1494009094710-1": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/chrisdyer.jpg",
-              "link": "shopify://collections/chris-dyer"
+              "image": "shopify:\/\/shop_images\/chrisdyer.jpg",
+              "link": "shopify:\/\/collections\/chris-dyer"
             }
           },
           "1494009094710-2": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/moniquemunoz.jpg",
-              "link": "shopify://collections/monique-munoz"
+              "image": "shopify:\/\/shop_images\/moniquemunoz.jpg",
+              "link": "shopify:\/\/collections\/monique-munoz"
             }
           },
           "1494009918375": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/mugwort.jpg",
-              "link": "shopify://collections/mugwort"
+              "image": "shopify:\/\/shop_images\/mugwort.jpg",
+              "link": "shopify:\/\/collections\/mugwort"
             }
           },
           "1505158918747": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/Enon_SMALL_SQUARE_a535d2c0-2511-443a-a5f7-4df343c083aa.jpg",
-              "link": "shopify://collections/sam-farrand"
+              "image": "shopify:\/\/shop_images\/Enon_SMALL_SQUARE_a535d2c0-2511-443a-a5f7-4df343c083aa.jpg",
+              "link": "shopify:\/\/collections\/sam-farrand"
             }
           }
         },
@@ -356,7 +356,7 @@
           "1494010241233": {
             "type": "html",
             "settings": {
-              "code": "<h1 style=\"text-align:center;margin-top:50px;margin-bottom:-40px;\">Featured Artists</h1>",
+              "code": "<h1 style=\"text-align:center;margin-top:50px;margin-bottom:-40px;\">Featured Artists<\/h1>",
               "width": "50%"
             }
           }
@@ -374,7 +374,7 @@
           "1494011397386": {
             "type": "html",
             "settings": {
-              "code": "<h1 style=\"text-align:center;margin-top:50px;\">Shop Our Insta</h1><br>\r\n<script src=\"https://like2have.it/embed.js?id=f8168190-b899-4f04-80e7-f4e0ec6c088f&size=large\" id=\"l2h-widget-f8168190-b899-4f04-80e7-f4e0ec6c088f\" async=\"\"></script>\r\n<br><br>",
+              "code": "<h1 style=\"text-align:center;margin-top:50px;\">Shop Our Insta<\/h1><br>\r\n<script src=\"https:\/\/like2have.it\/embed.js?id=f8168190-b899-4f04-80e7-f4e0ec6c088f&size=large\" id=\"l2h-widget-f8168190-b899-4f04-80e7-f4e0ec6c088f\" async=\"\"><\/script>\r\n<br><br>",
               "width": "100%"
             }
           }
@@ -389,7 +389,7 @@
       "page-faqs": {
         "type": "page-faqs",
         "settings": {
-          "faq-text1-head": "Can I return / exchange an item?",
+          "faq-text1-head": "Can I return \/ exchange an item?",
           "faq-text1-cont": "We do not process returns, but we do process exchanges within 15 days of receiving the product if it has not been used. All exchanges are made for store credit. All sales on clearance items are final and cannot be exchanged, clearance items or items sent back to us after 15 days without prior approval will not be processed. To make an exchange please send your item along with a note bearing your name, and your E-Mail address. Once we receive your exchange, we will send an e-mail with a coupon code for the amount of the exchanged item(s). Send to: The Headspace Attn: Returns 5725 W. 2nd Ave Lakewood, CO 80226",
           "faq-text2-head": "When will my order ship?",
           "faq-text2-cont": "We have a 0-3 business day handling period. (M-F)",
@@ -437,29 +437,29 @@
           "1495384601725-0": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/shopwomens_2ac73981-3dc0-4d99-8546-9aa0edee8996.png",
-              "link": "shopify://collections/women"
+              "image": "shopify:\/\/shop_images\/shopwomens_2ac73981-3dc0-4d99-8546-9aa0edee8996.png",
+              "link": "shopify:\/\/collections\/women"
             }
           },
           "1495384601725-2": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/shopacc.png",
-              "link": "shopify://collections/accessories"
+              "image": "shopify:\/\/shop_images\/shopacc.png",
+              "link": "shopify:\/\/collections\/accessories"
             }
           },
           "1495384645855": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/shopclearance_4f2ca746-fa93-4140-89f7-355cd1bed711.png",
-              "link": "shopify://collections/clearance"
+              "image": "shopify:\/\/shop_images\/shopclearance_4f2ca746-fa93-4140-89f7-355cd1bed711.png",
+              "link": "shopify:\/\/collections\/clearance"
             }
           },
           "1495384862966": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/shopmens_f0e0fbb1-9012-4a03-b749-cba2bc9fe9d6.png",
-              "link": "shopify://collections/men"
+              "image": "shopify:\/\/shop_images\/shopmens_f0e0fbb1-9012-4a03-b749-cba2bc9fe9d6.png",
+              "link": "shopify:\/\/collections\/men"
             }
           }
         },
@@ -479,8 +479,8 @@
           "1514515878548": {
             "type": "html",
             "settings": {
-              "code": "<div style=\"background-image:url('https://cdn.shopify.com/s/files/1/1898/4303/files/galaxy.jpg?8504242719722020597'); padding: 20px 5px;\">\n<div style=\"width:100%;\"><center><h1 style=\"color:#fff; font-size:47px; background-color:#000;\">Clearance Event <br>\n</h1></center></div>\n<br><center><div>\n<a href=\"https://theheadspace.net/collections/women-clearance\" target=\"_blank\"><img src=\"https://cdn.shopify.com/s/files/1/1898/4303/files/womenclearance2.png?14028342540104115512\"></a>   <a href=\"https://theheadspace.net/collections/men-clearance\" target=\"_blank\"><img src=\"https://cdn.shopify.com/s/files/1/1898/4303/files/menclearance2.png?14028342540104115512\"></a>\n</div></center>\n</div>",
-              "width": "50%"
+              "code": "<div class=\"banner-home\">\n  <a href=\"https:\/\/theheadspace.net\/collections\/sam-farrand\">\n    <div class=\"bg\"><\/div>\n    <div class=\"text-wrapper\">\n      <h1>Sam Farrand<br>50% Off Sale<\/h1>\n      <div class=\"caption\">\n        <h2>Closeout Pricing<\/h2>\n        <h2>Production Ceased<\/h2>\n      <\/div>\n    <\/div>\n  <\/a>\n<\/div>",
+              "width": "100%"
             }
           }
         },
@@ -507,7 +507,8 @@
       "sections": {
         "header": {
           "type": "header",
-          "settings": {}
+          "settings": {
+          }
         },
         "hero": {
           "type": "hero",
@@ -520,18 +521,21 @@
           "blocks": {
             "slideshow-0": {
               "type": "image",
-              "settings": {}
+              "settings": {
+              }
             },
             "slideshow-1": {
               "type": "image",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
             "slideshow-0",
             "slideshow-1"
           ],
-          "settings": {}
+          "settings": {
+          }
         },
         "featured-collections": {
           "type": "collection",
@@ -541,11 +545,13 @@
         },
         "feature-row": {
           "type": "feature-row",
-          "settings": {}
+          "settings": {
+          }
         },
         "footer": {
           "type": "footer",
-          "settings": {}
+          "settings": {
+          }
         }
       },
       "content_for_index": [
