@@ -2,6 +2,7 @@
 <!--[if IE 9]> <html class="ie9 no-js" lang="{{ shop.locale }}"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{ shop.locale }}"> <!--<![endif]-->
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28927944-1"></script>
   <script>window.wh_metafields = {};
     {% if customer.tags.size > 0 %} window.wh_customer_tags = true; {% endif %}
     window.wh_discount_value = 1;
@@ -206,16 +207,6 @@
   {% include 'bold-loyalties-welcome-modal' %}
   {% include 'bold-loyalties-callout' %}
   <!-- // end bold code -->
-<!-- BEEKETINGSCRIPT CODE START -->{% include 'bk-tracking' %}<!-- BEEKETINGSCRIPT CODE END -->{% if product %}
-<script>
-  var lionParams = lionParams || {};
-  lionParams.customer = {};
-  lionParams.product = {{ product | json }};
-  {% if  customer %}
-    lionParams.customer.email = "{{ customer.email }}";
-  {% endif %}
-</script>
-{% endif %}
 
 <input type="hidden" name="aaaformbuilder_customer_logged_id" value="{{customer.id}}" id="aaaformbuilder_customer_logged_id"></body>
 </html>
