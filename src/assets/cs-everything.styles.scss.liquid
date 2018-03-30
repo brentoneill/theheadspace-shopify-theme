@@ -7588,13 +7588,20 @@ button.iwishBuyBtn.btn { background: #333 none repeat scroll 0 0; border: 1px so
   min-height: 75vh;
   position: relative;
   text-align: center;
-  padding: 100px;
+  padding: 80px;
   .text-wrapper {
     margin-top: 5vh;
     text-align: center;
     z-index: 1;
     position: relative;
   }
+
+  .caption {
+    display: table;
+    clear: both;
+    margin-bottom: 40px;
+  }
+
   h1 {
     color: #000;
     font-size: 80px;
@@ -7620,5 +7627,34 @@ button.iwishBuyBtn.btn { background: #333 none repeat scroll 0 0; border: 1px so
     height: 100%;
     background-image: url('{{ "farrand.jpg" | asset_url }}');
     background-repeat: repeat;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-home {
+    padding: 10px;
+    min-height: 25vh;
+    h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+
+    h2 {
+      font-size: 36px;
+      line-height: 1;
+      padding: 10px;
+      float: left;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner-home {
+    h2 {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
   }
 }
