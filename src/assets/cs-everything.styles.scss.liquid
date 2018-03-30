@@ -1,7 +1,8 @@
 /*----------Variables----------*/
-$font_general: {{ settings.base_font | remove: 'Google+' | replace: '+', ' ' }};
-$font_heading: {{ settings.header_font | remove: 'Google+' | replace: '+', ' ' }};
-$font_misc: {{ settings.misc_font | remove: 'Google+' | replace: '+', ' ' }};
+$font_general: 'Source Sans Pro', sans-serif;
+$font_heading: 'Source Sans Pro', sans-serif;
+$font_misc: 'Source Sans Pro', sans-serif;
+
 
 $font_size_slide_large: 60px;
 $font_size_heading: 20px;
@@ -7665,5 +7666,13 @@ button.iwishBuyBtn.btn { background: #333 none repeat scroll 0 0; border: 1px so
       width: 100%;
       text-align: center;
     }
+  }
+}
+
+.template- {
+  .main-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px;
   }
 }

@@ -6,15 +6,15 @@
   -webkit-font-smoothing: antialiased;
 }
 @mixin toch_callout() {
-  -webkit-touch-callout:none; 
-  -webkit-text-size-adjust:none; 
-  -ms-text-size-adjust:100%; 
+  -webkit-touch-callout:none;
+  -webkit-text-size-adjust:none;
+  -ms-text-size-adjust:100%;
 }
 @mixin box_sizing($var) {
-  -webkit-appearance: textfield; 
-  -webkit-box-sizing: $var; 
-  -moz-box-sizing: $var; 
-  box-sizing: $var; 
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: $var;
+  -moz-box-sizing: $var;
+  box-sizing: $var;
 }
 @mixin display_inline() {
   display: inline-block;
@@ -22,9 +22,9 @@
   zoom: 1;
 }
 @mixin border_radius($var) {
-  -moz-border-radius: $var; 
-  -webkit-border-radius: $var; 
-  border-radius: $var; 
+  -moz-border-radius: $var;
+  -webkit-border-radius: $var;
+  border-radius: $var;
 }
 @mixin box-shadow($var1, $var2, $var3, $var4, $var5) {
   -webkit-box-shadow: $var1 $var2 $var3 $var4 $var5;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
@@ -39,13 +39,15 @@
 /*End Mixins*/
 
 /*Variables*/
-$font_general: {{ settings.base_font | remove: 'Google+' | replace: '+', ' ' }};
+$font_general: 'Source Sans Pro', sans-serif;
+
 
 $font_size_general: 14px;
 
 $line_height_general: 1.55em;
 
-$font_family_general: {{ settings.header_font | remove: 'Google+' | replace: '+', ' ' }};
+$font_family_general: 'Source Sans Pro', sans-serif;
+
 
 $border_general: #ccc;
 
@@ -75,19 +77,19 @@ $border_button_hover: #333;
 /*End Variables*/
 
 /* ----------------Initial valuables ------------------*/
-html,body { 
-  margin: 0; 
-  padding: 0; 
+html,body {
+  margin: 0;
+  padding: 0;
   border: 0;
   @include smooth_font();
 }
-html { 
-  font-size: $font_size_general; 
+html {
+  font-size: $font_size_general;
   @include toch_callout();
-  height: 100%; 
+  height: 100%;
 }
-body { 
-  line-height: $line_height_general; 
+body {
+  line-height: $line_height_general;
   font-size: $font_size_general;
 }
 {% if settings.use_bg_image %}
@@ -101,230 +103,230 @@ body {
   }
 {% endif %}
 /*HTML element*/
-article, 
-aside, 
-details, 
-figcaption, 
-figure, 
-dialog, 
-footer, 
-header, 
-hgroup, 
-menu, 
-nav, 
-section { 
-  display:block; 
+article,
+aside,
+details,
+figcaption,
+figure,
+dialog,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display:block;
 }
 /*End HTML element*/
 /*Form and input*/
-form { 
-  margin:0; 
-  padding:0; 
+form {
+  margin:0;
+  padding:0;
 }
-button, 
-input, 
-select, 
-textarea { 
-  font-size: $font_size_general; 
-  margin: 0; 
+button,
+input,
+select,
+textarea {
+  font-size: $font_size_general;
+  margin: 0;
   vertical-align: baseline;
   height: 48px;
   line-height: 48px;
 }
-button, 
-input { 
-  line-height: $line_height_general; 
+button, f
+input {
+  line-height: $line_height_general;
   &:focus {
     outline: none;
   }
 }
-button::-moz-focus-inner, 
-input::-moz-focus-inner { 
-  border: 0; 
-  padding: 0; 
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
-button, 
-input[type="button"], 
-input[type="reset"], 
-input[type="submit"] { 
-  cursor: pointer; 
-  -webkit-appearance: button; 
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
 }
 input[type="search"] {
   @include box_sizing(content-box);
 }
-input[type="search"]::-webkit-search-decoration { 
-  -webkit-appearance: none; 
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
-textarea { 
-  overflow: auto; 
-  vertical-align: top; 
+textarea {
+  overflow: auto;
+  vertical-align: top;
 }
-select, 
-input[type=file] { 
-  height: auto; 
-  line-height: $line_height_general; 
+select,
+input[type=file] {
+  height: auto;
+  line-height: $line_height_general;
 }
-input, 
-textarea { 
-  font-family: $font_family_general; 
-  -webkit-appearance: none; 
-  vertical-align:top; 
-  height:24px; 
-  line-height:$line_height_general; 
+input,
+textarea {
+  font-family: $font_family_general;
+  -webkit-appearance: none;
+  vertical-align:top;
+  height:24px;
+  line-height:$line_height_general;
   font-size:$font_size_general;
-  padding:5px; 
-  border:1px solid $border_general; 
+  padding:5px;
+  border:1px solid $border_general;
   @include display_inline();
   @include border_radius(0);
   @include box-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.06), inset);
 }
-input.focus, 
-input:focus, 
-textarea.focus, 
-textarea:focus { 
-  border:1px solid $border_general; 
-  @include box-shadow(0px, 2px, 1px, rgba(76, 144, 238, 0.3), inset); 
-}
-input[type=password]:focus, 
-input[type=text]:focus, 
-input[type=number]:focus, 
-input[type=email]:focus, 
-textarea:focus { 
-  outline:none; 
-}
-input[type=checkbox],
-input[type=radio] { 
-  height:16px; 
-  line-height:$line_height_general; 
-  vertical-align:middle; 
-}
-input[type=checkbox] { 
-  -webkit-appearance:checkbox; 
-}
-input[type=file] { 
-  cursor:pointer; 
-  border:none; 
-  box-shadow:none; 
-  padding:0; 
-  margin:0; 
-}
-input[type=submit] { 
-  cursor:pointer; 
-}
-select { 
-  font-size:$font_size_general; 
-  @include display_inline(); 
-  color: $color_general; 
-  font-family: $font_family_general; 
-  vertical-align:top; 
-  height:22px; 
-  line-height: $line_height_general; 
-  padding:initial; 
-  border:1px solid $border_general; 
-  @include border_radius(0);
-}
-select:focus, 
-select.focus { 
-  outline:none; 
-  border:1px solid $border_general; 
+input.focus,
+input:focus,
+textarea.focus,
+textarea:focus {
+  border:1px solid $border_general;
   @include box-shadow(0px, 2px, 1px, rgba(76, 144, 238, 0.3), inset);
 }
-textarea { 
-  min-height:72px; 
+input[type=password]:focus,
+input[type=text]:focus,
+input[type=number]:focus,
+input[type=email]:focus,
+textarea:focus {
+  outline:none;
 }
-img { 
-  max-width:100%; 
-  height:auto; 
-  border: 0; 
-  -ms-interpolation-mode: bicubic; 
+input[type=checkbox],
+input[type=radio] {
+  height:16px;
+  line-height:$line_height_general;
+  vertical-align:middle;
 }
-ul, ol { 
-  margin: 0; 
-  padding: 0; 
+input[type=checkbox] {
+  -webkit-appearance:checkbox;
 }
-ul li { 
+input[type=file] {
+  cursor:pointer;
+  border:none;
+  box-shadow:none;
+  padding:0;
+  margin:0;
+}
+input[type=submit] {
+  cursor:pointer;
+}
+select {
+  font-size:$font_size_general;
+  @include display_inline();
+  color: $color_general;
+  font-family: $font_family_general;
+  vertical-align:top;
+  height:22px;
+  line-height: $line_height_general;
+  padding:initial;
+  border:1px solid $border_general;
+  @include border_radius(0);
+}
+select:focus,
+select.focus {
+  outline:none;
+  border:1px solid $border_general;
+  @include box-shadow(0px, 2px, 1px, rgba(76, 144, 238, 0.3), inset);
+}
+textarea {
+  min-height:72px;
+}
+img {
+  max-width:100%;
+  height:auto;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+ul li {
   list-style: none;
 }
 /*End Form and input*/
 /*Typo*/
-h1,h2,h3,h4,h5,h6 { 
-  color: $color_heading; 
-  margin:0; 
-  font-family: $font_family_general; 
+h1,h2,h3,h4,h5,h6 {
+  color: $color_heading;
+  margin:0;
+  font-family: $font_family_general;
   text-transform: uppercase;
-  font-weight: $font_weight_bold; 
-  line-height: $line_height_general; 
+  font-weight: $font_weight_bold;
+  line-height: $line_height_general;
 }
-h1 { 
-  font-size: $font_size_h1; 
+h1 {
+  font-size: $font_size_h1;
 }
-h2 { 
-  font-size: $font_size_h2; 
+h2 {
+  font-size: $font_size_h2;
 }
-h3 { 
-  font-size: $font_size_h3; 
+h3 {
+  font-size: $font_size_h3;
 }
-h4 { 
-  font-size: $font_size_h4; 
+h4 {
+  font-size: $font_size_h4;
 }
-h5 { 
-  font-size: $font_size_h5; 
+h5 {
+  font-size: $font_size_h5;
 }
-h6 { 
-  font-size: $font_size_h6; 
+h6 {
+  font-size: $font_size_h6;
 }
-p { 
-  margin: 0; 
+p {
+  margin: 0;
   line-height: $line_height_general;
   color: $color_general;
 }
 /*End Typo*/
 /*Link and Buttons*/
-a { 
-  color: $color_link; 
-  text-decoration: none; 
+a {
+  color: $color_link;
+  text-decoration: none;
   font-size: $font_size_general;
   font-family: $font_general;
 }
-a:hover { 
-  color:$color_link_hover; 
+a:hover {
+  color:$color_link_hover;
   text-decoration: none;
-  -webkit-backface-visibility:hidden; 
+  -webkit-backface-visibility:hidden;
 }
-a.btn, 
-input.btn, 
-button.btn { 
-  font-family: {{ settings.base_font | remove: 'Google+' | replace: '+', ' ' }}; 
+a.btn,
+input.btn,
+button.btn {
+  font-family: {{ settings.base_font | remove: 'Google+' | replace: '+', ' ' }};
   @include box-shadow(0,0,0,transparent,inset);
   @include display_inline();
-  height:36px; 
-  line-height:$line_height_general; 
-  border:none; 
-  margin:0; 
-  padding:0 20px; 
+  height:36px;
+  line-height:$line_height_general;
+  border:none;
+  margin:0;
+  padding:0 20px;
   color: $color_button;
   border: 1px solid $border_button;
   background: $bkg_button;
 }
-a.btn:hover, 
-input.btn:hover, 
-button.btn:hover { 
-  background-color: $bkg_button_hover; 
-  color: $color_button_hover; 
-  -webkit-backface-visibility:hidden; 
-  border-color: $border_button_hover; 
+a.btn:hover,
+input.btn:hover,
+button.btn:hover {
+  background-color: $bkg_button_hover;
+  color: $color_button_hover;
+  -webkit-backface-visibility:hidden;
+  border-color: $border_button_hover;
 }
-a.btn:hover:disabled, 
-input.btn:hover:disabled, 
-button.btn:hover:disabled { 
+a.btn:hover:disabled,
+input.btn:hover:disabled,
+button.btn:hover:disabled {
   @includ opacity(0.2,20);
   cursor:default;
 }
-input.disabled.btn:hover, 
-button.disabled.btn:hover { 
-  background-color:$bkg_button_hover; 
-  color:$color_button_hover; 
+input.disabled.btn:hover,
+button.disabled.btn:hover {
+  background-color:$bkg_button_hover;
+  color:$color_button_hover;
 }
 .btn:disabled,
 .disabled {
@@ -333,22 +335,22 @@ button.disabled.btn:hover {
 }
 /*End Link and Buttons*/
 /*Table*/
-table { 
-  width: 100%; 
-  border-spacing: 0; 
+table {
+  width: 100%;
+  border-spacing: 0;
 }
-table tr td { 
-  border-top: 1px solid $border_general; 
+table tr td {
+  border-top: 1px solid $border_general;
 }
-table tr td, table tr th { 
-  padding: 10px; 
-  text-align: left; 
+table tr td, table tr th {
+  padding: 10px;
+  text-align: left;
 }
-strong { 
-  font-weight: $font_weight_bold; 
+strong {
+  font-weight: $font_weight_bold;
 }
-em { 
-  font-style: italic; 
+em {
+  font-style: italic;
 }
 /*End Table*/
 /* ----------------Initial valuables ------------------*/
