@@ -3734,6 +3734,9 @@ $bg_none_check: url({{ 'bg_none_check.png' | asset_url }});
 .collection-heading {
   .collection-heading-wrapper{
     @include background_breadcrumb();
+    position: static;
+    z-index: 10;
+    margin-bottom: 20px;
     @media(max-width: 767px) {
       height: auto;
       line-height: $line_height_general;
@@ -7245,6 +7248,10 @@ $height_copyright: 90px;
 a.fb-next,a.fb-prev{ font-size:26px; opacity: 0.8; color: #000000;}
 body.is-touch .fb-nav span{ display: none; }
 
+body {
+  font-family: $font_general !important;
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
   only screen and (min--moz-device-pixel-ratio: 1.5),
   only screen and (min-device-pixel-ratio: 1.5){
@@ -7679,7 +7686,7 @@ button.iwishBuyBtn.btn { background: #333 none repeat scroll 0 0; border: 1px so
     a {
       .bg {
         min-height: 0;
-      }  
+      }
     }
 
 
