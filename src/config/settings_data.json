@@ -479,7 +479,7 @@
           "1514515878548": {
             "type": "html",
             "settings": {
-              "code": "<div class=\"banner-home\">\n  <a href=\"https:\/\/theheadspace.net\/collections\/sam-farrand\">\n    <div class=\"bg\"><\/div>\n    <div class=\"text-wrapper\">\n      <h1>Sam Farrand<br>50% Off Sale<\/h1>\n      <div class=\"caption\">\n        <h2>Closeout Pricing<\/h2>\n        <h2>Production Ceased<\/h2>\n      <\/div>\n    <\/div>\n  <\/a>\n<\/div>",
+              "code": "<div class=\"banner-home\">\n  <div class=\"row-fluid\">\n    <div class=\"col-md-6\">\n      <a class=\"farrand\" href=\"https:\/\/theheadspace.net\/collections\/sam-farrand\">\n        <div class=\"bg\"><\/div>\n        <div class=\"text-wrapper\">\n          <h1>Sam Farrand<br>50% Off Sale<\/h1>\n          <div class=\"caption\">\n            <h2>Closeout Pricing<\/h2>\n            <h2>Production Ceased<\/h2>\n          <\/div>\n        <\/div>\n      <\/a>\n    <\/div>\n    <div class=\"col-md-6\">\n      <a class=\"hoodies\" href=\"https:\/\/theheadspace.net\/collections\/hoodies\">\n        <div class=\"bg\"><\/div>\n        <div class=\"text-wrapper\">\n          <h1>Up to 65% Off All Hoodies<\/h1>\n        <\/div>\n      <\/a>\n    <\/div>\n  <\/div>\n<\/div>",
               "width": "100%"
             }
           }

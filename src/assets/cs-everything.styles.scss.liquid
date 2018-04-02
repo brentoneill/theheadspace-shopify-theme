@@ -638,7 +638,7 @@ $height_header_mobile: 80px;
                     @include border_radius(0);
                     box-shadow: none;
                     border: none;
-                    width: calc(100% - 196px);
+                    width: 180px;
                   }
                   .search-header__submit {
                     position: absolute;
@@ -728,7 +728,7 @@ $height_header_mobile: 80px;
             height: 40px;
             box-shadow: none;
             padding: 0 10px;
-            width: 240px;
+            width: 180px;
             border: 1px solid $border_general;
           }
         }
@@ -7587,10 +7587,11 @@ button.iwishBuyBtn.btn { background: #333 none repeat scroll 0 0; border: 1px so
 
 .banner-home {
   width: 100%;
-  min-height: 75vh;
   position: relative;
   text-align: center;
-  padding: 80px;
+  min-height: 70vh;
+  display: table;
+  clear: both;
   .text-wrapper {
     margin-top: 5vh;
     text-align: center;
@@ -7604,13 +7605,15 @@ button.iwishBuyBtn.btn { background: #333 none repeat scroll 0 0; border: 1px so
     margin-left: auto;
     margin-bottom: 40px;
     width: 100%;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   }
 
   h1 {
     color: #000;
-    font-size: 80px;
+    font-size: 70px;
     line-height: 1;
     margin-bottom: 40px;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   }
 
   h2 {
@@ -7622,22 +7625,64 @@ button.iwishBuyBtn.btn { background: #333 none repeat scroll 0 0; border: 1px so
     padding: 20px;
     float: left;
   }
-  .bg {
-    z-index: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('{{ "farrand.jpg" | asset_url }}');
-    background-repeat: repeat;
+
+  .col-md-6 {
+    padding: 50px 15px;
+    margin-bottom: 10px;
   }
+
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    &.farrand {
+      .bg {
+        background-image: url('{{ "farrand.jpg" | asset_url }}');
+      }
+    }
+
+    &.hoodies {
+      h1 {
+        color: #fff;
+
+      }
+
+      .bg {
+
+        color: #fff;
+        background-position: center;
+        background-size: cover;
+        background-repeat: repeat;
+        background-image: url('{{ "hoodie-bg.jpg" | asset_url }}');
+      }
+    }
+
+    .bg {
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 540px;
+      background-repeat: repeat;
+    }
+  }
+
 }
 
 @media screen and (max-width: 768px) {
   .banner-home {
     padding: 10px;
     min-height: 25vh;
+
+    a {
+      .bg {
+        min-height: 0;
+      }  
+    }
+
+
     h1 {
       font-size: 60px;
       margin-bottom: 20px;

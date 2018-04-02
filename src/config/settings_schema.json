@@ -4,7 +4,7 @@
     "theme_name": "Everything - Fashion N1",
     "theme_author": "Tvlgiao team",
     "theme_version": "1.0.0",
-    "theme_documentation_url": "https://codespotsupport.com/others",
+    "theme_documentation_url": "https:\/\/codespotsupport.com\/others",
     "theme_support_email": "support@designshopify.com"
   },
   {
@@ -378,7 +378,7 @@
           },
           {
             "value": "Helvetica, Arial, sans-serif",
-            "label": "Helvetica/Arial",
+            "label": "Helvetica\/Arial",
             "group": "Sans-serif"
           },
           {
@@ -428,7 +428,7 @@
           },
           {
             "value": "Monaco, 'Lucida Console', 'DejaVu Sans Mono', monospace",
-            "label": "Monaco/Lucida Console",
+            "label": "Monaco\/Lucida Console",
             "group": "Monospace"
           }
         ]
@@ -525,7 +525,7 @@
           },
           {
             "value": "Helvetica, Arial, sans-serif",
-            "label": "Helvetica/Arial",
+            "label": "Helvetica\/Arial",
             "group": "Sans-serif"
           },
           {
@@ -575,7 +575,7 @@
           },
           {
             "value": "Monaco, 'Lucida Console', 'DejaVu Sans Mono', monospace",
-            "label": "Monaco/Lucida Console",
+            "label": "Monaco\/Lucida Console",
             "group": "Monospace"
           }
         ]
@@ -672,7 +672,7 @@
           },
           {
             "value": "Helvetica, Arial, sans-serif",
-            "label": "Helvetica/Arial",
+            "label": "Helvetica\/Arial",
             "group": "Sans-serif"
           },
           {
@@ -722,7 +722,7 @@
           },
           {
             "value": "Monaco, 'Lucida Console', 'DejaVu Sans Mono', monospace",
-            "label": "Monaco/Lucida Console",
+            "label": "Monaco\/Lucida Console",
             "group": "Monospace"
           }
         ]
@@ -769,11 +769,11 @@
       {
         "type": "textarea",
         "id": "mailchimp_form_action",
-        "label": "Mailchimp form action [( ? )](http://support.shopify.com/customer/portal/articles/640278)"
+        "label": "Mailchimp form action [( ? )](http:\/\/support.shopify.com\/customer\/portal\/articles\/640278)"
       },
       {
         "type": "paragraph",
-        "content": "[Where do I get my MailChimp Form Action?](http://support.shopify.com/customer/portal/articles/640278)"
+        "content": "[Where do I get my MailChimp Form Action?](http:\/\/support.shopify.com\/customer\/portal\/articles\/640278)"
       },
       {
         "type": "text",
@@ -861,11 +861,11 @@
       },
       {
         "type": "paragraph",
-        "content": "Separate your currency codes with a space. Use the ISO 4217 3-letter currency code. Click [here](http://www.xe.com/iso4217.php) for a complete list of currency codes. Example: CAD USD."
+        "content": "Separate your currency codes with a space. Use the ISO 4217 3-letter currency code. Click [here](http:\/\/www.xe.com\/iso4217.php) for a complete list of currency codes. Example: CAD USD."
       },
       {
         "type": "paragraph",
-        "content": "* For this functionality to work in your shop, you are required to edit your money formats as per [these instructions](http://wiki.shopify.com/Do_Tell_Where_The_Money_Is) (“Do tell where the money is”)."
+        "content": "* For this functionality to work in your shop, you are required to edit your money formats as per [these instructions](http:\/\/wiki.shopify.com\/Do_Tell_Where_The_Money_Is) (“Do tell where the money is”)."
       }
     ]
   },
@@ -1008,7 +1008,7 @@
         "type": "text",
         "id": "password_admin_link_html",
         "label": "Admin Link text",
-        "default": "Are you the store owner? <a href='/admin' class='text-link'>Log in here</a>"
+        "default": "Are you the store owner? <a href='\/admin' class='text-link'>Log in here<\/a>"
       },
       {
         "type": "text",
