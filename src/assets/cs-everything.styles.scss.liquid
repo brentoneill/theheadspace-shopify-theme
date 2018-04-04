@@ -7644,7 +7644,9 @@ button.iwishBuyBtn.btn { background: #333 none repeat scroll 0 0; border: 1px so
     width: 100%;
     &.farrand {
       .bg {
+        width: calc(100% - 5px);
         background-image: url('{{ "farrand.jpg" | asset_url }}');
+        margin-right: 2px;
       }
     }
 
@@ -7687,8 +7689,14 @@ button.iwishBuyBtn.btn { background: #333 none repeat scroll 0 0; border: 1px so
       .bg {
         min-height: 0;
       }
+        &.farrand {
+          .bg {
+            width: 100%;
+            background-image: url('{{ "farrand.jpg" | asset_url }}');
+            margin-right: 0;
+          }
+        }
     }
-
 
     h1 {
       font-size: 60px;
