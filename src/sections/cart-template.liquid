@@ -24,7 +24,7 @@
     <div class="container">
       <div class="row">
         <div class="cart-inner">
-          <div id="cart">  
+          <div id="cart">
             {% if cart.item_count == 0 %}
             <div class="cart-empty">
               <h2 class="tc">{{ 'cart.general.empty' | t }}</h2>
@@ -45,20 +45,20 @@
                   <tbody>
                     {% for item in cart.items %}
 						{%- include 'bold-cart-item' with item -%}
-                    
+
                     {% comment %}
-                    {% include 'wh_calculate_discount' with item.product %} 
-                    {% include 'wh_variant' with item.variant %} 
-                    {% assign wh_line_price = wh_v_price | times: item.quantity %} 
+                    {% include 'wh_calculate_discount' with item.product %}
+                    {% include 'wh_variant' with item.variant %}
+                    {% assign wh_line_price = wh_v_price | times: item.quantity %}
                     {% endcomment %}
-                    
+
                     <tr>
                       <td class="image">
                         <div class="product_image">
                           <a href="{{ item.url }}">
                             <img src="{{ item | img_url: 'small' }}"  alt="{{ item.title | escape }}" />
                           </a>
-                        </div>  
+                        </div>
                         <div class="product_name">
                           <a href="{{ item.url }}">
                             <p>{{ item.product.title }}</p>
@@ -77,14 +77,14 @@
                             {% else %}
                             <input type="number" size="4" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" class="tc item-quantity" />
                             {% endif %}
-                          </div><!--End wrapper-->                  
-                        </div><!--End quantily wrapper-->                
+                          </div><!--End wrapper-->
+                        </div><!--End quantily wrapper-->
                       </td>
                       <td class="total title-1"> {% comment %} {{ wh_line_price | money }}{% endcomment %}  {{  bold_item_line_price | money }}</td>
                       <!-- Bold: Loyalty Points - Step 5 -->
                       <span class="bold-loyalties-cart-points-{{forloop.index}}"></span>
                       <!-- // end bold code -->
-                      <td class="remove"><a href="/cart/change?line={{ forloop.index }}&quantity=0" class="cart"><i class="fa fa-trash"></i></a></td>              
+                      <td class="remove"><a href="/cart/change?line={{ forloop.index }}&quantity=0" class="cart"><i class="fa fa-trash"></i></a></td>
                     </tr>
                     {% endfor %}
                     <tr class="summary">
@@ -94,18 +94,18 @@
                       <div class="additional-notes">
                         <span class="wh-minimums-note"></span>
                         <span class="wh-extra-note "></span>
-                      </div> 
+                      </div>
                       </td>
                     </tr>
                   </tbody>
                 </table>
-                
-                <div class="group-bottom"> 
+
+                <div class="group-bottom">
                   <div class="cart-buttons col-sm-12"><p style="font-weight:bold;font-size:20px;color:#dc1107;">Please allow us 1-3 business days for handling. In case you ordered an item on back-order, allow 1-45 days for delivery.</p>
-                    <div class="buttons clearfix">                    
+                    <div class="buttons clearfix">
                       <input type="submit" id="update-cart" class="btn" name="update" value="{{ 'cart.general.update' | t }}" />
                       <input type="button" id="continue-cart" class="btn btn-3" name="continue" value="{{ 'cart.general.continue' | t }}" onclick="location.href='{{ shop.url }}'" />
-                      <input type="submit" id="checkout" class="btn" name="checkout" value="{{ 'cart.general.checkout' | t }}" />                        
+                      <input type="submit" id="checkout" class="btn" name="checkout" value="{{ 'cart.general.checkout' | t }}" />
                       <!-- Bold: Loyalty Points - Step 5.1 -->
                       <p class="bold-loyalties-cart-earn"></p>
                       <!-- // end bold code -->
@@ -120,18 +120,18 @@
                   </div>
                   {% endif %}
                 </div>
-                
-                {% if additional_checkout_buttons %}        
-                  <div class="col-sm-6">
-                    <div class="extra-checkout-buttons inner-right">
+
+                {% if additional_checkout_buttons %}
+                  <div class="col-xs-12">
+                    <div class="extra-checkout-buttons inner-right pull-right prn">
                       {{ content_for_additional_checkout_buttons }}
                     </div>
                   </div>
                 {% endif %}
               </form>
             </div>
-            {% endif %}  
-          </div> 
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
@@ -152,17 +152,17 @@
       window.cartToEnsure = {{ cart | json }}
       for (var i = 0, len = checkoutElements.length; i < len; i++) {
         var element = checkoutElements[i];
-        jQuery(element).bind("click", function(){          
+        jQuery(element).bind("click", function(){
           return ensureCorrectQuantites(window.cartToEnsure, "#updates_{variant_id}");
         })
       }
     }
-    
+
     if (typeof ensureInStock == "function"){
       var checkoutElements = ["input[name='checkout']", "button[name='checkout']", "input[name='goto_pp']", "button[name='goto_pp']", "input[name='goto_gc']", "button[name='goto_gc']", "[href$='checkout']"];
       for (var i = 0, len = checkoutElements.length; i < len; i++) {
         var element = checkoutElements[i];
-        jQuery(element).bind("click", function(){          
+        jQuery(element).bind("click", function(){
           return ensureInStock();
         })
       }

@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/brentoneill/.nvm/versions/v8.9.0/bin/node /Users/brentoneill/.yarn/bin/yarn.js start:production
+  /Users/brentoneill/.nvm/versions/v8.9.0/bin/node /Users/brentoneill/.yarn/bin/yarn.js star
 
 PATH: 
   /usr/local/heroku/bin:/Users/brentoneill/.rvm/gems/ruby-2.2.0/bin:/Users/brentoneill/.rvm/gems/ruby-2.2.0@global/bin:/Users/brentoneill/.rvm/rubies/ruby-2.2.0/bin:/Users/brentoneill/.yarn/bin:/Users/brentoneill/.config/yarn/global/node_modules/.bin:/Users/brentoneill/.nvm/versions/v8.9.0/bin:/Applications/Genymotion.app/Contents/MacOS:~/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/local/bin:/opt/local/sbin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/brentoneill/Library/Python/3.6/bin:/usr/local/bin/pip:~/.local/bin:/usr/local/bin:/usr/sbin:/usr/bin:/bin:/sbin:/usr/local/git/bin:/Users/brentoneill/.rvm/bin
@@ -906,7 +906,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
 
 Trace: 
-  Error: Command "start:production" not found.
+  Error: Command "star" not found.
       at new MessageError (/Users/brentoneill/.yarn/lib/cli.js:186:110)
       at /Users/brentoneill/.yarn/lib/cli.js:87307:17
       at Generator.next (<anonymous>)

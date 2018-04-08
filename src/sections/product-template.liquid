@@ -1,6 +1,6 @@
 {%- include 'bold-product' with product, hide_action: 'break', output: 'none' -%}
-{% assign main_product = product %} 
-{% include 'wh_calculate_discount' with product %} 
+{% assign main_product = product %}
+{% include 'wh_calculate_discount' with product %}
 
 <div class="product-template__container page-width" itemscope itemtype="http://schema.org/Product" id="ProductSection-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true">
   <meta itemprop="name" content="{{ product.title }}">
@@ -42,10 +42,10 @@
             <div id="product" class="{{ product.handle }} detail-content">
               <div class="add_to_wishlist">
                 <div class="col-md-12 clearfix info-detail-pro">
-                  <div class="col-md-6" id="product-image">            
+                  <div class="col-md-6" id="product-image">
                     <div id="featuted-image" class="image featured">
-                      {% if product.images.size > 0 %}       
-                      {% assign featured_image = bold_selected_or_first_available_variant.featured_image | default: product.featured_image %}                    
+                      {% if product.images.size > 0 %}
+                      {% assign featured_image = bold_selected_or_first_available_variant.featured_image | default: product.featured_image %}
                       {% if section.settings.enable_product_image_zoom %}
                       <img src="{{ featured_image | img_url: '1024x1024' }}" alt="{{ featured_image.alt | escape }}" />
                       {% else %}
@@ -103,18 +103,18 @@
                   <div class="col-md-6" id="product-information">
                     <h1 class="title">{{ product.title }}</h1>
 
-                    {% if section.settings.enable_rating_star %}
+                    <!-- {% if section.settings.enable_rating_star %}
                     <div class="rating-star">
                       <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
                     </div>
-                    {% endif %}
+                    {% endif %} -->
 
                     {% if section.settings.enable_quickoverview %}
                     <div class="description">
-                      <h5 class="quick_overview">{{'products.product.quick_overview'|t}}</h5>
+                      <!-- <h5 class="quick_overview">{{'products.product.quick_overview'|t}}</h5> -->
                       {{ product.description | truncatewords: section.settings.detail_qov_lenght }}
                     </div>
-                    {% endif %}                                
+                    {% endif %}
 
                     {% if bold_variants_size == 1 and bold_selected_or_first_available_variant.title contains 'Default' %}
                     {% assign hide_default_title = true %}
@@ -127,14 +127,12 @@
                           <select id="product-select" name="id" style="height:50px;">
                             {% for variant in product.variants %}
                             {%- include 'bold-variant' with variant, hide_action: 'skip' -%}
-                            <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.inventory_quantity  }} In Stock</option> 
-                            {% endfor %}  
+                            <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.inventory_quantity  }} In Stock</option>
+                            {% endfor %}
                           </select>
 
                         </div>
                         {% endfor %}
-
-
 
 
                         {% assign variant = bold_selected_or_first_available_variant %}
@@ -143,7 +141,7 @@
                         <div class="purchase">
                           <h2 class="price" id="price-preview">{{ wh_v_price | money }}{% if wh_v_price < wh_v_compare_at_price %} <del>{{ wh_v_compare_at_price | money }}</del>{% endif %}</h2>
                           <!-- Bold: Loyalty Points - Step 4 -->
-                          {% if shop.metafields.bold_loyalties.active == 1 %}    
+                          {% if shop.metafields.bold_loyalties.active == 1 %}
                           <div class="bold-loyalties-redeem-amount">or <span class="bold-placeholder"></span></div>
                           {% endif %}
                           <!-- // end bold code -->
@@ -171,12 +169,11 @@
                         <div class="purchase-section{% if bold_variants_size > 1 %} multiple{% endif %}">
                           <div class="purchase">
                             {% unless product.available %}
-
                             {% else %}
                             {% if customer.tags.size > 0 %}
-                            <button id="add-to-cart" class="btn" type="submit" name="add"><i class="fa fa-shopping-cart"></i>{{"products.product.add_to_cart"|t}}</button>                        
+                            <button id="add-to-cart" class="btn" type="submit" name="add"><i class="fa fa-shopping-cart"></i>{{"products.product.add_to_cart"|t}}</button>
                             {% else %}
-                            <button id="add-to-cart" class="btn add-to-cart" type="submit" name="add"><i class="fa fa-shopping-cart"></i>{{"products.product.add_to_cart"|t}}</button>                        
+                            <button id="add-to-cart" class="btn add-to-cart" type="submit" name="add"><i class="fa fa-shopping-cart"></i>{{"products.product.add_to_cart"|t}}</button>
                             {% endif %}
                             <!-- Bold: Loyalty Points - Step 4.2 -->
                             <div class="bold-loyalties-redeem"></div>
@@ -185,7 +182,7 @@
 
 
                             <div id="cart-animation" style="display:none">1</div>
-                            {% endunless %}                     
+                            {% endunless %}
                             <div data-app="eastsideco_sizeGuides"
                                  data-shop="{{ shop.permanent_domain }}"
                                  data-tags="{{ product.tags | join:',' | escape }}"
@@ -197,7 +194,7 @@
                       </div>
                     </form>
 
-                    {% include 'iwish_v2' with 'iwishproduct' %} 
+                    {% include 'iwish_v2' with 'iwishproduct' %}
 
                     {% comment %}
                     {% if section.settings.display_wishlist %}
@@ -248,10 +245,10 @@
                       {% include 'social-sharing' %}
                     </div>
                     {% endif %}
-                  </div>              
+                  </div>
                 </div>
               </div>
-              {% if section.settings.display_tab %}
+              <!-- {% if section.settings.display_tab %}
               <div id="tabs-information" class="col-md-12" >
                 <div class="col-md-3 tabs-title">
                   <ul class="nav nav-tabs tabs-left sideways">
@@ -266,7 +263,7 @@
                   </div>
                 </div>
               </div>
-              {% endif %}
+              {% endif %} -->
 
               {% if section.settings.show_related_products %}
               {% include 'related-products' %}
@@ -345,7 +342,7 @@
 
         var wh_discount_js = {{wh_discount_value}}
 
-            if (window.wh_customer_tags != true) {   
+            if (window.wh_customer_tags != true) {
         return product
         }
 
@@ -357,7 +354,7 @@
 
         wh_compare_js_price = variant.compare_at_price
 
-        if ((wh_compare_js_price == null) || (wh_compare_js_price == 0)) {     
+        if ((wh_compare_js_price == null) || (wh_compare_js_price == 0)) {
         wh_compare_js_price = variant.price;
         }
 
@@ -371,7 +368,7 @@
         variant.price = v_price;
         }
 
-        if (wh_compare_js_price > variant.price) {                   
+        if (wh_compare_js_price > variant.price) {
         variant.compare_at_price = wh_compare_js_price
         }
 
