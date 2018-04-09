@@ -285,21 +285,6 @@
           "blog_sidebar2": ""
         }
       },
-      "1478508798679": {
-        "type": "home-product-slider",
-        "settings": {
-          "title": "BEST SELLING",
-          "collection": "popular-products",
-          "limit": "18",
-          "auto": true,
-          "time": "5000",
-          "grid": "4",
-          "grid2": "3",
-          "grid3": "3",
-          "grid4": "2",
-          "grid5": "1"
-        }
-      },
       "1494009094710": {
         "type": "banners",
         "blocks": {
@@ -330,21 +315,13 @@
               "image": "shopify:\/\/shop_images\/mugwort.jpg",
               "link": "shopify:\/\/collections\/mugwort"
             }
-          },
-          "1505158918747": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Enon_SMALL_SQUARE_a535d2c0-2511-443a-a5f7-4df343c083aa.jpg",
-              "link": "shopify:\/\/collections\/sam-farrand"
-            }
           }
         },
         "block_order": [
           "1494009094710-0",
           "1494009094710-1",
           "1494009094710-2",
-          "1494009918375",
-          "1505158918747"
+          "1494009918375"
         ],
         "settings": {
           "padding": false
@@ -411,26 +388,6 @@
           "cart_notes_enable": false
         }
       },
-      "1495295793779": {
-        "type": "home-tabs",
-        "blocks": {
-          "1495295793779-0": {
-            "type": "featured_collection",
-            "settings": {
-              "title": "",
-              "collection": "clearance"
-            }
-          }
-        },
-        "block_order": [
-          "1495295793779-0"
-        ],
-        "settings": {
-          "title": "Clearance",
-          "grid": "4",
-          "rows": "2"
-        }
-      },
       "1495384601725": {
         "type": "banners",
         "blocks": {
@@ -494,9 +451,7 @@
     },
     "content_for_index": [
       "1511463169410",
-      "1478508798679",
       "1495384601725",
-      "1495295793779",
       "1494010211736",
       "1494009094710",
       "1494011383331"
