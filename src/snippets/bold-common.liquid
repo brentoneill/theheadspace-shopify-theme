@@ -7,7 +7,7 @@ It may be overwritten and any customizations would be lost.
 ---------------------------  WARNING  ---------------------------
 {%- endcomment -%}
 
-<script>
+<script defer>
 
     {%- comment -%} common data {%- endcomment -%}
     window.BOLD = window.BOLD || {};
@@ -119,6 +119,4 @@ It may be overwritten and any customizations would be lost.
 
 </script>
 
-{{ 'bold-upsell.css' | asset_url | stylesheet_tag }}
-{{ 'bold-upsell-custom.css' | asset_url | stylesheet_tag }}
-{{ 'https://ro.boldapps.net/v2_ui/js/ro.js' | script_tag }}
+<script defer type="text/text/javascript" src="https://ro.boldapps.net/v2_ui/js/ro.js"></script>

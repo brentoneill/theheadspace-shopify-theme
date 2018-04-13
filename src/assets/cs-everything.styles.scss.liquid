@@ -1,7 +1,31 @@
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('{{ OpenSans-Regular.ttf | asset_url }}') format('truetype');
+}
+@font-face {
+    font-family: 'OpenSans-Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url('{{ OpenSans-Light.ttf | asset_url }}') format('truetype');
+}
+@font-face {
+    font-family: 'OpenSans-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('{{ OpenSans-Bold.ttf | asset_url }}') format('truetype');
+}
+
 /*----------Variables----------*/
-$font_general: 'Source Sans Pro', sans-serif;
+$font_general: 'OpenSans-Regular', sans-serif;
 $font_heading: 'Source Sans Pro', sans-serif;
 $font_misc: 'Source Sans Pro', sans-serif;
+
+$font-light: 'OpenSans-Regular';
+$font-reg: 'OpenSans-Light';
+$font-bold: 'OpenSans-Bold';
 
 
 $font_size_slide_large: 60px;
@@ -5038,7 +5062,7 @@ $bg_filter: #323232;
               padding-right: 0;
               .buttons {
                 input {
-                  font-size: 14px;
+                  font-size: 125%;
                   text-transform: uppercase;
                   border-radius: 0;
                   color: $color_text_button;
@@ -7159,10 +7183,9 @@ $height_copyright: 90px;
           color: #222;
           font-family: $font_general;
           vertical-align: top;
-          height: 22px;
-          line-height: 22px;
-          padding: 2px;
-          padding: initial;
+          height: 32px;
+          line-height: 32px;
+          padding: 8px;
           border: 1px solid #ccc;
           @include border_radius(1px);
           margin-bottom: 20px;
@@ -7750,4 +7773,44 @@ button.iwishBuyBtn.btn { background: #333 none repeat scroll 0 0; border: 1px so
 
 .rating-star {
   display: none !important;
+}
+
+.shappify-motivator-slider p {
+  color: #fff;
+}
+
+.selector-wrapper {
+  label:first-child {
+    display: none !important;
+  }
+  label {
+    color: #333 !important;
+    font-size: 16px;
+  }
+}
+
+
+
+button#add-to-cart.cartbutton {
+  height: 50px !important;
+  line-height: 50px !important;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+[data-section-id="product-template"] {
+  .breadcrumb {
+    float: left !important;
+  }
+  h1 {
+    font-size: 32px !important;
+    line-height: 1;
+  }
+}
+
+.product-detail-content .detail-content-wrapper .detail-content-inner .detail-content .info-detail-pro #product-image .image a {
+  transition: all .1s ease-out;
+  &:hover {
+    opacity: .8;
+  }
 }

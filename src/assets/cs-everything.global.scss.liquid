@@ -1,3 +1,30 @@
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('{{ OpenSans-Regular.ttf | asset_url }}') format('truetype');
+}
+@font-face {
+    font-family: 'OpenSans-Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url('{{ OpenSans-Light.ttf | asset_url }}') format('truetype');
+}
+@font-face {
+    font-family: 'OpenSans-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('{{ OpenSans-Bold.ttf | asset_url }}') format('truetype');
+}
+
+/*----------Variables----------*/
+$font_general: 'OpenSans-Regular', sans-serif;
+$font_heading: 'OpenSans-Regular', sans-serif;
+$font_misc: 'OpenSans-Regular', sans-serif;
+
+
+
 /*Mixins*/
 @mixin smooth_font() {
   font-smooth: always;
